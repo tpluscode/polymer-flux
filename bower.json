@@ -14,6 +14,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.1"
+    "bootstrap": "~3.3.1",
+    "polymer": "~0.5.2",
+    "jsonld": "~0.3.19",
+    "reqwest": "~1.1.5",
+    "zdk-modal": "~0.3.0",
+    "underscore": "~1.7.0"
   }
 }

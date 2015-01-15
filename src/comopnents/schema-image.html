@@ -1,0 +1,29 @@
+<link rel="import" href="zdk-modal.html">
+
+<polymer-element name="schema-image" attributes="image">
+  <template>
+  <style>
+  img {
+    cursor: pointer;
+  }
+  </style>
+  <img src="{{ image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value'] }}"
+  alt="thumbnail" on-click="{{ open }}" id="thumbnail" />
+  <div>
+    <zdk-modal id="modal">
+      <img alt="large" src="{{ image['http://schema.org/contentUrl'][0]['@value'] }}"
+      on-click="{{ hide }}" />
+    </zdk-modal>
+  </div>
+</template>
+<script>
+Polymer('schema-image', {
+  open: function() {
+    this.$.modal.show();
+  },
+  hide: function() {
+    this.$.modal.hide();
+  }
+});
+</script>
+</polymer-element>

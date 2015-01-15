@@ -1,0 +1,35 @@
+<link rel="import" href="schema-image.html" />
+<link rel="import" href="sw-object.html" />
+<script type="text/javascript" src="../../bower_components/jsonld/bin/jsonld.js"></script>
+<script type="text/javascript" src="../../bower_components/reqwest/reqwest.min.js"></script>
+
+<polymer-element name="ld-resource">
+  <template>
+    <template if="{{ book }}" >
+      <sw-object object="{{ book }}"></sw-object>
+      <template if="{{ book['http://schema.org/image'] }}">
+        <schema-image image="{{ book['http://schema.org/image'][0] }}"></schema-image>
+      </template>
+    </template>
+  </template>
+  <script>
+  var promises = jsonld.promises;
+
+  Polymer('ld-resource', {
+    load: function(id) {
+      var bookView = this;
+
+      reqwest({
+        url: id,
+        headers:{
+          accept: 'application/ld+json'
+        }
+      }).then(function(res) {
+        return jsonld.expand(res, function(err, expanded) {
+          bookView.book = expanded[0];
+        });
+      })
+    }
+  });
+  </script>
+</polymer-element>

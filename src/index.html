@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Linked data browser</title>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script src="bower_components/polymer/polymer.js"></script>
+  <link rel="import" href="components/ld-browser.html" />
 
   <!-- Bootstrap -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +20,7 @@
   <![endif]-->
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  <ld-browser id="http://data.test.wikibus.org/book/1936"></ld-browser>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

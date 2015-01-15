@@ -1,0 +1,21 @@
+<link rel="import" href="ld-resource.html" />
+
+<polymer-element name="ld-browser" attributes="id">
+  <template if="{{ book }}">
+  <style>
+  input {
+    width: 80%;
+  }
+  </style>
+  <input value="{{ id }}" type="text" />
+  <button on-click="{{ load }}">Go</button>
+  <ld-resource id="resourceView"></ld-resource>
+</template>
+<script>
+Polymer('wikibus-book-search', {
+  load: function (){
+    this.$.resourceView.load(this.id);
+  }
+});
+</script>
+</polymer-element>

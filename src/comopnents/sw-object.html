@@ -1,0 +1,48 @@
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+
+<polymer-element name="sw-object" attributes="object">
+  <template>
+  <style>
+  * {
+    font-size: small;
+  }
+
+  th {
+    text-align: right;
+  }
+  </style>
+  <table>
+    <template repeat="{{ val in getValues(object) }}">
+      <tr>
+        <th>
+          {{ val['pred'] }}
+        </th>
+        <td>
+          <template repeat="{{ nested in val['val'] }}">
+            <template if="{{ nested['@value'] }}">
+              {{ nested['@value'] }}
+            </template>
+            <template if="{{ nested['@id'] }}">
+              <a href="{{ nested['@id'] }}" target="_blank">{{ nested['@id'] }}</a>
+            </template>
+            <template if="{{ !nested['@value'] }}">
+              <sw-object object="{{ nested }}"></sw-object>
+            </template>
+          </template>
+        </td>
+      </tr>
+    </template>
+  </table>
+</template>
+<script>
+Polymer('sw-object', {
+  getValues: function(obj) {
+    return _.chain(obj)
+    .map(function(p, k) { return { pred: k, val: p }; })
+    .reject(function (o) { return o.pred[0] == "@"; })
+    .reject(function (o) { return o.pred == "http://schema.org/image"; })
+    .value();
+  }
+});
+</script>
+</polymer-element>

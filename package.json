@@ -1,0 +1,14 @@
+{
+  "name": "flux-experiment",
+  "dependencies": {
+    "browserify": "^8.1.0",
+    "express": "^4.11.0",
+    "reflux": "^0.2.3"
+  },
+  "scripts": {
+    "build": "browserify"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12"
+  }
+}

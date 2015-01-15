@@ -20,5 +20,14 @@
     "reqwest": "~1.1.5",
     "zdk-modal": "~0.3.0",
     "underscore": "~1.7.0"
-  }
+  },
+  "overrides": {
+    "polymer": {
+      "main": [
+          "polymer.js",
+          "polymer.html"
+        ]
+      }
+    }
+  
 }

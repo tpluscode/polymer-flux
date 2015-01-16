@@ -23,11 +23,28 @@
   },
   "overrides": {
     "polymer": {
-      "main": [
-          "polymer.js",
-          "polymer.html"
-        ]
-      }
+      "main": [ "polymer.js", "polymer.html", "layout.html" ]
+    },
+    "bootstrap": {
+      "main": "dist/**/*.*"
+    },
+    "core-icon": {
+      "main": "core-icon.*"
+    },
+    "core-icons": {
+      "main": "*.html"
+    },
+    "core-iconset": {
+      "main": [ "core-iconset.html", "*.png" ]
+    },
+    "core-iconset-svg": {
+      "main": "core-iconset-svg.html"
+    },
+    "core-meta": {
+      "main": "core-meta.html"
+    },
+    "core-component-page": {
+      "main": "core-component-page.*"
     }
-  
+  }
 }

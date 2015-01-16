@@ -1,33 +1,33 @@
 <link rel="import" href="ld-resource.html" />
 
 <polymer-element name="ld-browser" attributes="uri">
-  <template if="{{ book }}">
-  <style>
-  input {
-    width: 80%;
-  }
-  </style>
-  <input value="{{ uri }}" type="text" />
-  <button on-click="{{ load }}">Go</button>
-  <ld-resource id="resourceView"></ld-resource>
-</template>
-<script>
-(function(NavActions, ModelStore) {
-  Polymer('ld-browser', {
-    ready: function() {
-      ModelStore.listen(this.show.bind(this));
-      NavActions.navigateTo.listen(this.onNavigating.bind(this));
-    },
-    load: function() {
-      NavActions.navigateTo(this.uri);
-    },
-    show: function(resource) {
-      this.$.resourceView.resource = resource;
-    },
-    onNavigating: function(newUri) {
-      this.uri = newUri;
-    }
-  });
-})(window.NavActions, window.ModelStore);
-</script>
+  <template>
+    <style>
+      input {
+        width: 80%;
+      }
+    </style>
+    <input value="{{ uri }}" type="text" />
+    <button on-click="{{ load }}">Go</button>
+    <ld-resource id="resourceView"></ld-resource>
+  </template>
+  <script>
+  (function(NavActions, ModelStore) {
+    Polymer('ld-browser', {
+      ready: function() {
+        ModelStore.listen(this.show.bind(this));
+        NavActions.navigateTo.listen(this.onNavigating.bind(this));
+      },
+      load: function() {
+        NavActions.navigateTo(this.uri);
+      },
+      show: function(resource) {
+        this.$.resourceView.resource = resource;
+      },
+      onNavigating: function(newUri) {
+        this.uri = newUri;
+      }
+    });
+  })(window.NavActions, window.ModelStore);
+  </script>
 </polymer-element>

@@ -12,10 +12,18 @@
   <ld-resource id="resourceView"></ld-resource>
 </template>
 <script>
-Polymer('ld-browser', {
-  load: function (){
-    this.$.resourceView.load(this.id);
-  }
-});
+(function(NavActions, ModelStore) {
+  Polymer('ld-browser', {
+    ready: function() {
+      ModelStore.listen(this.show.bind(this));
+    },
+    load: function() {
+      NavActions.navigateTo(this.id);
+    },
+    show: function(resource) {
+      this.$.resourceView.resource = resource;
+    }
+  });
+})(window.NavActions, window.ModelStore);
 </script>
 </polymer-element>

@@ -1,35 +1,13 @@
 <link rel="import" href="schema-image.html" />
 <link rel="import" href="sw-object.html" />
-<script type="text/javascript" src="../lib/jsonld/js/jsonld.js"></script>
-<script type="text/javascript" src="../lib/reqwest/reqwest.js"></script>
 
-<polymer-element name="ld-resource">
+<polymer-element name="ld-resource" attributes="resource" noscript>
   <template>
-    <template if="{{ book }}" >
-      <sw-object object="{{ book }}"></sw-object>
-      <template if="{{ book['http://schema.org/image'] }}">
-        <schema-image image="{{ book['http://schema.org/image'][0] }}"></schema-image>
+    <template if="{{ resource }}" >
+      <sw-object object="{{ resource }}"></sw-object>
+      <template if="{{ resource['http://schema.org/image'] }}">
+        <schema-image image="{{ resource['http://schema.org/image'][0] }}"></schema-image>
       </template>
     </template>
   </template>
-  <script>
-  var promises = jsonld.promises;
-
-  Polymer('ld-resource', {
-    load: function(id) {
-      var bookView = this;
-
-      reqwest({
-        url: id,
-        headers:{
-          accept: 'application/ld+json'
-        }
-      }).then(function(res) {
-        return jsonld.expand(res, function(err, expanded) {
-          bookView.book = expanded[0];
-        });
-      })
-    }
-  });
-  </script>
 </polymer-element>

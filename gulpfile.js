@@ -7,7 +7,7 @@ gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
-gulp.task('build', [ 'bower-files', 'html', 'connect', 'watch']);
+gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
 
 gulp.task('connect', function() {
   connect.server({
@@ -21,8 +21,14 @@ gulp.task('html', function() {
       .pipe(gulp.dest('dist'));
 })
 
+gulp.task('js', function() {
+  gulp.src('src/**/*.js')
+      .pipe(gulp.dest('dist'));
+})
+
 gulp.task('watch', function() {
   gulp.watch(['src/**/*.html'], ['html', 'reload']);
+  gulp.watch(['src/**/*.js'], ['js', 'reload']);
 });
 
 gulp.task('bower-files', function() {

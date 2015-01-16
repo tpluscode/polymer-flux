@@ -19,11 +19,16 @@
     "jsonld": "~0.3.19",
     "reqwest": "~1.1.5",
     "zdk-modal": "~0.3.0",
-    "underscore": "~1.7.0"
+    "underscore": "~1.7.0",
+    "reflux": "~0.2.3"
   },
   "overrides": {
     "polymer": {
-      "main": [ "polymer.js", "polymer.html", "layout.html" ]
+      "main": [
+        "polymer.js",
+        "polymer.html",
+        "layout.html"
+      ]
     },
     "bootstrap": {
       "main": "dist/**/*.*"
@@ -35,7 +40,10 @@
       "main": "*.html"
     },
     "core-iconset": {
-      "main": [ "core-iconset.html", "*.png" ]
+      "main": [
+        "core-iconset.html",
+        "*.png"
+      ]
     },
     "core-iconset-svg": {
       "main": "core-iconset-svg.html"
@@ -46,5 +54,8 @@
     "core-component-page": {
       "main": "core-component-page.*"
     }
+  },
+  "devDependencies": {
+    "reflux": "~0.2.3"
   }
 }

@@ -14,7 +14,7 @@
           accept: 'application/ld+json'
         }
       }).then(function(res) {
-        jsonld.expand(res).then(function(expanded) {
+        return jsonld.expand(res).then(function(expanded) {
           self.trigger(expanded[0]);
         });
       });

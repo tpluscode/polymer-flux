@@ -8,13 +8,12 @@
     loadResource: function(uri) {
       var self = this;
 
-      reqwest({
-        url: uri,
-        headers:{
-          accept: 'application/ld+json'
+      qwest.get(uri, null, {
+        headers: {
+          'Accept': 'application/ld+json'
         }
       }).then(function(res) {
-        return jsonld.expand(res).then(function(expanded) {
+        return jsonld.expand(JSON.parse(res)).then(function(expanded) {
           self.trigger(expanded[0]);
         });
       });

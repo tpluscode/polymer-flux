@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Linked data browser</title>
   <script src="lib/webcomponentsjs/webcomponents.js"></script>
   <script src="lib/jsonld/js/jsonld.js"></script>
-  <script src="lib/reqwest/reqwest.js"></script>
+  <script src="lib/qwest/src/qwest.js"></script>
   <script src="lib/reflux/dist/reflux.js"></script>
   <script src="js/actions.js"></script>
   <script src="js/modelStore.js"></script>
-  <link rel="import" href="lib/polymer/polymer.html"></script>
+  <link rel="import" href="lib/polymer/polymer.html" />
   <link rel="import" href="components/ld-browser.html" />
 
   <!-- Bootstrap -->
-  <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,11 +25,6 @@
   <![endif]-->
 </head>
 <body unresolved>
-  <ld-browser uri="http://data.test.wikibus.org/books"></ld-browser>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="lib/jquery/dist/jquery.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <ld-browser uri="http://test.wikibus.org/books"></ld-browser>
 </body>
 </html>

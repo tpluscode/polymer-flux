@@ -16,12 +16,16 @@
   Polymer('ld-browser', {
     ready: function() {
       ModelStore.listen(this.show.bind(this));
+      NavActions.navigateTo.listen(this.onNavigating.bind(this));
     },
     load: function() {
       NavActions.navigateTo(this.uri);
     },
     show: function(resource) {
       this.$.resourceView.resource = resource;
+    },
+    onNavigating: function(newUri) {
+      this.uri = newUri;
     }
   });
 })(window.NavActions, window.ModelStore);

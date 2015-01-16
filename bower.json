@@ -21,7 +21,8 @@
     "zdk-modal": "~0.3.0",
     "underscore": "~1.7.0",
     "reflux": "~0.2.3",
-    "qwest": "~1.5.4"
+    "qwest": "~1.5.4",
+    "xdomain": "~0.6.17"
   },
   "overrides": {
     "polymer": {

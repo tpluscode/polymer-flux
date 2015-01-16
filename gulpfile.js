@@ -3,25 +3,29 @@ var gulp = require('gulp'),
     bowerFiles = require('main-bower-files'),
     del = require('del');
 
-gulp.task('default', ['clean', 'bower-files', 'html', 'connect', 'watch']);
+gulp.task('default', ['clean'], function() {
+  gulp.start('build');
+});
 
-gulp.task('connect', ['clean'], function() {
+gulp.task('build', [ 'bower-files', 'html', 'connect', 'watch']);
+
+gulp.task('connect', function() {
   connect.server({
     root: 'dist',
     livereload: true
   });
 });
 
-gulp.task('html', ['clean'], function() {
+gulp.task('html', function() {
   gulp.src('src/**/*.html')
       .pipe(gulp.dest('dist'));
 })
 
-gulp.task('watch', ['clean'], function() {
+gulp.task('watch', function() {
   gulp.watch(['src/**/*.html'], ['html', 'reload']);
 });
 
-gulp.task('bower-files', ['clean'], function() {
+gulp.task('bower-files', function() {
   gulp.src(bowerFiles(), { base: 'bower_components' })
       .pipe(gulp.dest('dist/lib'));
 });

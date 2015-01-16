@@ -23,7 +23,7 @@
               {{ nested['@value'] }}
             </template>
             <template if="{{ nested['@id'] }}">
-              <a href="javascript:void()" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
+              <a href="javascript:void(0)" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
             </template>
             <template if="{{ !nested['@value'] }}">
               <sw-object object="{{ nested }}"></sw-object>
@@ -45,7 +45,7 @@
       .value();
     },
     selectResource: function(ev) {
-      NavActions.navigateTo(ev.target['data-object']);
+      NavActions.navigateTo(ev.target.attributes['data-object'].value);
     }
   });
 })(window.NavActions);

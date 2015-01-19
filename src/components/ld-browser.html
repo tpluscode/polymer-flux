@@ -39,7 +39,7 @@
       }),
       ready: function() {
         this.state = this.BrowserState.vanilla;
-        ModelStore.listen(this.show.bind(this));
+        NavActions.navigateTo.success.listen(this.show.bind(this));
         NavActions.navigateTo.listen(this.onNavigating.bind(this));
       },
       load: function() {
@@ -48,6 +48,7 @@
       show: function(resource) {
         this.resource = resource;
         this.state = this.BrowserState.ready;
+        this.uri = resource['@id'];
       },
       onNavigating: function(newUri) {
         this.uri = newUri;

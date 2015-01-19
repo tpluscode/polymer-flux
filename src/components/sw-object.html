@@ -23,7 +23,7 @@
               {{ nested['@value'] }}
             </template>
             <template if="{{ nested['@id'] }}">
-              <a href="javascript:void(0)" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
+              <a id="link" href="?uri={{ nested['@id'] }}" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
             </template>
             <template if="{{ !nested['@value'] }}">
               <sw-object object="{{ nested }}"></sw-object>
@@ -37,6 +37,13 @@
 <script>
 (function(NavActions) {
   Polymer('sw-object', {
+    ready: function() {
+      if(this.$.link) {
+        this.$.link.addEventListener('click', function(ev) {
+          return ev.preventDefault();
+        });
+      }
+    },
     getValues: function(obj) {
       return _.chain(obj)
       .map(function(p, k) { return { pred: k, val: p }; })
@@ -46,6 +53,7 @@
     },
     selectResource: function(ev) {
       NavActions.navigateTo(ev.target.attributes['data-object'].value);
+      return ev.preventDefault();
     }
   });
 })(window.NavActions);

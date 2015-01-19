@@ -1,4 +1,4 @@
-<script type="text/javascript" src="../lib/underscore/underscore.js"></script>
+<script src="polymer.require.js"></script>
 
 <polymer-element name="sw-object" attributes="object">
   <template>
@@ -35,8 +35,10 @@
   </table>
 </template>
 <script>
-(function(NavActions) {
-  Polymer('sw-object', {
+Polymer.require('sw-object', ['actions', 'underscore'], function(actions, _) {
+  var NavActions = actions.NavActions;
+
+  return {
     ready: function() {
       if(this.$.link) {
         this.$.link.addEventListener('click', function(ev) {
@@ -55,7 +57,7 @@
       NavActions.navigateTo(ev.target.attributes['data-object'].value);
       return ev.preventDefault();
     }
-  });
-})(window.NavActions);
+  };
+});
 </script>
 </polymer-element>

@@ -23,7 +23,8 @@
     "reflux": "~0.2.3",
     "qwest": "~1.5.4",
     "xdomain": "~0.6.17",
-    "font-awesome": "~4.2.0"
+    "font-awesome": "~4.2.0",
+    "requirejs": "~2.1.15"
   },
   "overrides": {
     "polymer": {

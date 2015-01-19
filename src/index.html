@@ -7,9 +7,7 @@
   <title>Linked data browser</title>
   <script src="lib/xdomain/dist/xdomain.js"></script>
   <script src="lib/webcomponentsjs/webcomponents.js"></script>
-  <script src="lib/jsonld/js/jsonld.js"></script>
-  <script src="lib/qwest/src/qwest.js"></script>
-  <script src="lib/reflux/dist/reflux.js"></script>
+  <script src="lib/requirejs/require.js"></script>
   <script src="js/actions.js"></script>
   <script src="js/modelStore.js"></script>
   <script src="js/historyStore.js"></script>
@@ -27,8 +25,21 @@
   <![endif]-->
 </head>
 <body unresolved>
-  <ld-browser uri=""></ld-browser>
+  <ld-browser></ld-browser>
   <script>
+  requirejs.config({
+    baseUrl: '/lib',
+    paths: {
+      jsonld: 'jsonld/js/jsonld',
+      'es6-promises': 'es6-promise/promise',
+      reflux: 'reflux/dist/reflux',
+      qwest: 'qwest/src/qwest',
+      underscore: 'underscore/underscore'
+    }
+  });
+
+  requirejs(['HistoryStore']);
+
   function getQueryVariable(variable)
   {
     var query = window.location.search.substring(1);

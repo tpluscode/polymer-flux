@@ -1,8 +1,12 @@
-(function(Reflux, global) {
+(function() {
   'use strict';
 
-  global.NavActions = Reflux.createActions({
-      'navigateTo': { children: [ 'success', 'failed' ] },
-      'beforeLoad': { }
+  define('actions', ['reflux'], function(Reflux){
+      return {
+        NavActions: Reflux.createActions({
+          'navigateTo': { children: [ 'success', 'failed' ] },
+          'beforeLoad': { }
+        })
+      };
   });
-})(window.Reflux, window);
+})();

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
 <link rel="import" href="ld-resource.html" />
+<script src="polymer.require.js"></script>
 
 <polymer-element name="ld-browser" attributes="uri">
   <template>
@@ -29,8 +30,10 @@
     </template>
   </template>
   <script>
-  (function(NavActions, ModelStore) {
-    Polymer('ld-browser', {
+  Polymer.require('ld-browser', ['actions', 'ModelStore'], function(actions, ModelStore) {
+    var NavActions = actions.NavActions;
+
+    return {
       BrowserState: Object.freeze({
         vanilla: 0,
         loading: 1,
@@ -62,7 +65,7 @@
         this.state = this.BrowserState.error;
         this.errorMessage = message;
       }
-    });
-  })(window.NavActions, window.ModelStore);
+    };
+  });
   </script>
 </polymer-element>

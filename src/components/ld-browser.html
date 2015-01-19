@@ -24,7 +24,7 @@
     </template>
     <template if="{{ state === BrowserState.error }}">
       <p>
-        <i class="fa fa-exclamation-circle fa-2x"></i> Something went wrong
+        <i class="fa fa-exclamation-circle fa-2x"></i> Something went wrong. Status code {{ errorMessage }}
       </p>
     </template>
   </template>
@@ -41,6 +41,7 @@
         this.state = this.BrowserState.vanilla;
         NavActions.navigateTo.success.listen(this.show.bind(this));
         NavActions.navigateTo.listen(this.onNavigating.bind(this));
+        NavActions.navigateTo.failed.listen(this.onError.bind(this));
       },
       load: function() {
         NavActions.navigateTo(this.uri);
@@ -56,6 +57,10 @@
       },
       onEnter: function(ev) {
         if (ev.keyCode == 13) this.load();
+      },
+      onError: function(message) {
+        this.state = this.BrowserState.error;
+        this.errorMessage = message;
       }
     });
   })(window.NavActions, window.ModelStore);

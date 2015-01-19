@@ -20,6 +20,9 @@
         return jsonld.expand(JSON.parse(res)).then(function(expanded) {
           NavActions.navigateTo.success(expanded[0]);
         });
+      }).catch(function (error) {
+        NavActions.navigateTo.failed(this.status);
+        throw error;
       });
     }
   });

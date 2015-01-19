@@ -1,20 +1,44 @@
+<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
 <link rel="import" href="ld-resource.html" />
 
 <polymer-element name="ld-browser" attributes="uri">
   <template>
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
     <style>
       input {
         width: 80%;
       }
     </style>
-    <input value="{{ uri }}" type="text" />
+    <input value="{{ uri }}" type="text" on-keypress="{{ onEnter }}" />
     <button on-click="{{ load }}">Go</button>
-    <ld-resource id="resourceView"></ld-resource>
+    <template if="{{ state === BrowserState.ready }}">
+      <ld-resource id="resourceView" resource="{{ resource }}"></ld-resource>
+    </template>
+    <template if="{{ state === BrowserState.loading }}">
+      <p>
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+      </p>
+    </template>
+    <template if="{{ state === BrowserState.vanilla }}">
+      <i class="fa fa-hand-o-left fa-2x"></i> Click here
+    </template>
+    <template if="{{ state === BrowserState.error }}">
+      <p>
+        <i class="fa fa-exclamation-circle fa-2x"></i> Something went wrong
+      </p>
+    </template>
   </template>
   <script>
   (function(NavActions, ModelStore) {
     Polymer('ld-browser', {
+      BrowserState: Object.freeze({
+        vanilla: 0,
+        loading: 1,
+        ready: 2,
+        error: 3
+      }),
       ready: function() {
+        this.state = this.BrowserState.vanilla;
         ModelStore.listen(this.show.bind(this));
         NavActions.navigateTo.listen(this.onNavigating.bind(this));
       },
@@ -22,10 +46,15 @@
         NavActions.navigateTo(this.uri);
       },
       show: function(resource) {
-        this.$.resourceView.resource = resource;
+        this.resource = resource;
+        this.state = this.BrowserState.ready;
       },
       onNavigating: function(newUri) {
         this.uri = newUri;
+        this.state = this.BrowserState.loading;
+      },
+      onEnter: function(ev) {
+        if (ev.keyCode == 13) this.load();
       }
     });
   })(window.NavActions, window.ModelStore);

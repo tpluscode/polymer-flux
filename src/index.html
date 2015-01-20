@@ -8,6 +8,20 @@
   <script src="lib/xdomain/dist/xdomain.js"></script>
   <script src="lib/webcomponentsjs/webcomponents.js"></script>
   <script src="lib/requirejs/require.js"></script>
+  <script>
+  requirejs.config({
+    baseUrl: '/js/',
+    paths: {
+      jsonld: '/lib/jsonld/js/jsonld',
+      'es6-promise': '/lib/es6-promise/promise',
+      reflux: '/lib/reflux/dist/reflux',
+      qwest: '/lib/qwest/src/qwest',
+      underscore: '/lib/underscore/underscore'
+    }
+  });
+
+  require(['/js/app.js']);
+  </script>
   <link rel="import" href="lib/polymer/polymer.html" />
   <link rel="import" href="components/ld-browser.html" />
 
@@ -23,19 +37,5 @@
 </head>
 <body unresolved>
   <ld-browser></ld-browser>
-  <script>
-  requirejs.config({
-    baseUrl: '/js',
-    paths: {
-      jsonld: '/lib/jsonld/js/jsonld',
-      'es6-promise': '/lib/es6-promise/promise',
-      reflux: '/lib/reflux/dist/reflux',
-      qwest: '/lib/qwest/src/qwest',
-      underscore: '/lib/underscore/underscore'
-    }
-  });
-
-  require(['/js/app.js']);
-  </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 (function() {
 
-  define('ModelStore', ['reflux', 'jsonld', 'actions', 'qwest'], function(Reflux, jsonld, actions, qwest) {
+  define(['reflux', 'jsonld', 'actions', 'qwest'], function(Reflux, jsonld, actions, qwest) {
     'use strict';
 
     var NavActions = actions.NavActions;

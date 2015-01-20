@@ -8,9 +8,6 @@
   <script src="lib/xdomain/dist/xdomain.js"></script>
   <script src="lib/webcomponentsjs/webcomponents.js"></script>
   <script src="lib/requirejs/require.js"></script>
-  <script src="js/actions.js"></script>
-  <script src="js/modelStore.js"></script>
-  <script src="js/historyStore.js"></script>
   <link rel="import" href="lib/polymer/polymer.html" />
   <link rel="import" href="components/ld-browser.html" />
 
@@ -28,13 +25,13 @@
   <ld-browser></ld-browser>
   <script>
   requirejs.config({
-    baseUrl: '/lib',
+    baseUrl: '/js',
     paths: {
-      jsonld: 'jsonld/js/jsonld',
-      'es6-promises': 'es6-promise/promise',
-      reflux: 'reflux/dist/reflux',
-      qwest: 'qwest/src/qwest',
-      underscore: 'underscore/underscore'
+      jsonld: '/lib/jsonld/js/jsonld',
+      'es6-promise': '/lib/es6-promise/promise',
+      reflux: '/lib/reflux/dist/reflux',
+      qwest: '/lib/qwest/src/qwest',
+      underscore: '/lib/underscore/underscore'
     }
   });
 

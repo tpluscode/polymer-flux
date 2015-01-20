@@ -1,4 +1,4 @@
-define(['HistoryStore', 'ModelStore'], function() {   
+define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {   
   'use strict';
 
   function getQueryVariable(variable)

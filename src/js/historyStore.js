@@ -1,6 +1,6 @@
 (function() {
 
-  define('HistoryStore', ['reflux', 'actions'], function(Reflux, actions) {
+  define(['reflux', 'actions'], function(Reflux, actions) {
     'use strict';
 
     var NavActions = actions.NavActions;

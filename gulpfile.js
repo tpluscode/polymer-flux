@@ -12,7 +12,6 @@ gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
 
 gulp.task('connect', function() {
   connect.server({
-    root: 'dist',
     livereload: true
   });
 });

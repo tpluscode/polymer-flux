@@ -9,16 +9,16 @@
   <script src="lib/requirejs/require.js"></script>
   <script>
   requirejs.config({
-    baseUrl: '/js/',
+    baseUrl: '/dist/js/',
     paths: {
-      jsonld: '/lib/jsonld/js/jsonld',
-      'es6-promise': '/lib/es6-promise/promise',
-      reflux: '/lib/reflux/dist/reflux',
-      underscore: '/lib/underscore/underscore'
+      jsonld: '/dist/lib/jsonld/js/jsonld',
+      'es6-promise': '/dist/lib/es6-promise/promise',
+      reflux: '/dist/lib/reflux/dist/reflux',
+      underscore: '/dist/lib/underscore/underscore'
     }
   });
 
-  require(['/js/app.js']);
+  require(['js/app.js']);
   </script>
   <link rel="import" href="lib/polymer/polymer.html" />
   <link rel="import" href="components/ld-browser.html" />

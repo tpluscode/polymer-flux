@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+<link rel="import" href="ld-resource.html" />
+<script src="polymer.require.js"></script>
+
+<polymer-element name="ld-browser" attributes="uri">
+  <template>
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+    <style>
+      input {
+        width: 80%;
+      }
+    </style>
+    <input value="{{ uri }}" type="text" on-keypress="{{ onEnter }}" />
+    <button on-click="{{ load }}">Go</button>
+    <template if="{{ state === BrowserState.ready }}">
+      <ld-resource id="resourceView" resource="{{ resource }}"></ld-resource>
+    </template>
+    <template if="{{ state === BrowserState.loading }}">
+      <p>
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+      </p>
+    </template>
+    <template if="{{ state === BrowserState.vanilla }}">
+      <i class="fa fa-hand-o-left fa-2x"></i> Click here
+    </template>
+    <template if="{{ state === BrowserState.error }}">
+      <p>
+        <i class="fa fa-exclamation-circle fa-2x"></i> Something went wrong. Status code {{ errorMessage }}
+      </p>
+    </template>
+  </template>
+  <script>
+  Polymer.require('ld-browser', ['actions', 'ModelStore'], function(actions, ModelStore) {
+    var NavActions = actions.NavActions;
+
+    return {
+      BrowserState: Object.freeze({
+        vanilla: 0,
+        loading: 1,
+        ready: 2,
+        error: 3
+      }),
+      ready: function() {
+        this.state = this.BrowserState.vanilla;
+        NavActions.navigateTo.success.listen(this.show.bind(this));
+        NavActions.navigateTo.listen(this.onNavigating.bind(this));
+        NavActions.navigateTo.failed.listen(this.onError.bind(this));
+      },
+      load: function() {
+        NavActions.navigateTo(this.uri);
+      },
+      show: function(resource) {
+        this.resource = resource;
+        this.state = this.BrowserState.ready;
+        this.uri = resource['@id'];
+      },
+      onNavigating: function(newUri) {
+        this.uri = newUri;
+        this.state = this.BrowserState.loading;
+      },
+      onEnter: function(ev) {
+        if (ev.keyCode == 13) this.load();
+      },
+      onError: function(message) {
+        this.state = this.BrowserState.error;
+        this.errorMessage = message;
+      }
+    };
+  });
+  </script>
+</polymer-element>

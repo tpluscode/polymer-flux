@@ -14,7 +14,7 @@
         NavActions.navigateTo(ev.state);
       },
       pushHistory: function(state) {
-        var uri  = 'http://localhost:8080/';
+        var uri  = document.location.origin + document.location.pathname;
         if (state && state['@id'] && state['@id'] !== history.state) {
           uri += '?uri=' + state['@id'];
           history.pushState(state['@id'], '', uri);

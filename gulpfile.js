@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     bowerFiles = require('main-bower-files'),
-    del = require('del');
+    del = require('del'),
+    jshint = require('gulp-jshint');
 
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
@@ -23,6 +24,8 @@ gulp.task('html', function() {
 
 gulp.task('js', function() {
   gulp.src('src/**/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('jshint-stylish'))
       .pipe(gulp.dest('dist'));
 })
 

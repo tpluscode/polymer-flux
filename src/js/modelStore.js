@@ -4,7 +4,7 @@
     'use strict';
 
     var NavActions = actions.NavActions;
-    var jsonld = jsonld.promises;
+    var jsonldp = jsonld.promises;
 
     var currentModel = { };
 
@@ -14,21 +14,21 @@
         httpRequest.open("GET", uri, true);
         httpRequest.setRequestHeader('Accept','application/ld+json');
         httpRequest.onreadystatechange = function()
-      {
-        if (httpRequest.readyState != 4) {
-          return;
-        }
+        {
+          if (httpRequest.readyState != 4) {
+            return;
+          }
 
-        if (httpRequest.status != 200) {
-          reject(httpRequest);
-        } else {
-          resolve(httpRequest.responseText);
-        }
-      };
+          if (httpRequest.status != 200) {
+            reject(httpRequest);
+          } else {
+            resolve(httpRequest.responseText);
+          }
+        };
 
-      httpRequest.send(null);
-    });
-  }
+        httpRequest.send(null);
+      });
+    };
 
     return Reflux.createStore({
       init: function() {
@@ -40,7 +40,7 @@
         NavActions.beforeLoad(currentModel);
 
         executeXhr(uri).then(function(res) {
-          return jsonld.expand(JSON.parse(res)).then(function(expanded) {
+          return jsonldp.expand(JSON.parse(res)).then(function(expanded) {
             NavActions.navigateTo.success(expanded[0]);
           });
         }, function (request) {
@@ -48,5 +48,5 @@
         });
       }
     });
-  })
+  });
 })();

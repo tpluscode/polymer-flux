@@ -1,4 +1,4 @@
-define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {   
+define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {
   'use strict';
 
   function getQueryVariable(variable)
@@ -14,7 +14,7 @@ define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {
 
   window.addEventListener('polymer-ready', function() {
     var url = getQueryVariable('uri');
-    if (url == false) {
+    if (!url) {
       url = 'http://test.wikibus.org/';
     }
 

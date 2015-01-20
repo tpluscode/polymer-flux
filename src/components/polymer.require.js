@@ -1,7 +1,7 @@
-'use strict';
-
 Polymer.require = function(tag, deps, func) {
+  'use strict';
+
   require(deps, function() {
-    Polymer(tag, func.apply(this, arguments));
+    new Polymer(tag, func.apply(this, arguments));
   });
 };

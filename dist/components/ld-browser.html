@@ -15,14 +15,17 @@
     <template if="{{ state === BrowserState.ready }}">
       <ld-resource id="resourceView" resource="{{ resource }}"></ld-resource>
     </template>
+
     <template if="{{ state === BrowserState.loading }}">
       <p>
         <i class="fa fa-spinner fa-spin fa-5x"></i>
       </p>
     </template>
+
     <template if="{{ state === BrowserState.vanilla }}">
       <i class="fa fa-hand-o-left fa-2x"></i> Click here
     </template>
+
     <template if="{{ state === BrowserState.error }}">
       <p>
         <i class="fa fa-exclamation-circle fa-2x"></i> Something went wrong. Status code {{ errorMessage }}

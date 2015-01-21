@@ -1,5 +1,13 @@
 (function() {
 
+  var getOrigin = function() {
+    if (!document.location.origin) {
+      return document.location.protocol + "//" + document.location.hostname + (document.location.port ? ':' + document.location.port: '');
+    }
+
+    return document.location.origin;
+  };
+
   define(['reflux', 'actions'], function(Reflux, actions) {
     'use strict';
 
@@ -14,7 +22,7 @@
         NavActions.navigateTo(ev.state);
       },
       pushHistory: function(state) {
-        var uri  = document.location.origin + document.location.pathname;
+        var uri  = getOrigin() + document.location.pathname;
         if (state && state['@id'] && state['@id'] !== history.state) {
           uri += '?uri=' + state['@id'];
           history.pushState(state['@id'], '', uri);

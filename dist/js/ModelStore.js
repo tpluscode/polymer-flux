@@ -1,6 +1,6 @@
 (function() {
 
-  define(['reflux', 'jsonld', 'actions', 'es6-promise'], function(Reflux, jsonld, actions, promise) {
+  define(['reflux', 'jsonld', 'actions', 'es6-promise', 'jquery'], function(Reflux, jsonld, actions, promise, $) {
     'use strict';
 
     var NavActions = actions.NavActions;
@@ -9,24 +9,13 @@
     var currentModel = { };
 
     var executeXhr = function(uri) {
-      return new promise.Promise(function(resolve, reject) {
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.open("GET", uri, true);
-        httpRequest.setRequestHeader('Accept','application/ld+json');
-        httpRequest.onreadystatechange = function()
-        {
-          if (httpRequest.readyState != 4) {
-            return;
+      return $.ajax({
+          type: 'GET',
+          url: uri,
+          contentType: 'text/plain',
+          headers: {
+            'Accept': 'application/ld+json'
           }
-
-          if (httpRequest.status != 200) {
-            reject(httpRequest);
-          } else {
-            resolve(httpRequest.responseText);
-          }
-        };
-
-        httpRequest.send(null);
       });
     };
 
@@ -40,7 +29,7 @@
         NavActions.beforeLoad(currentModel);
 
         executeXhr(uri).then(function(res) {
-          return jsonldp.expand(JSON.parse(res)).then(function(expanded) {
+          return jsonldp.expand(res).then(function(expanded) {
             NavActions.navigateTo.success(expanded[0]);
           });
         }, function (request) {

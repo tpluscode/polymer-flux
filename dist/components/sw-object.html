@@ -23,10 +23,10 @@
               {{ nested['@value'] }}
             </template>
             <template if="{{ nested['@id'] }}">
-              <a id="link" href="?uri={{ nested['@id'] }}" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
+              <a class="link-value[{{ val['pred'] }}]" href="?uri={{ nested['@id'] }}" data-object="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
             </template>
             <template if="{{ !nested['@value'] }}">
-              <sw-object object="{{ nested }}"></sw-object>
+              <sw-object id="nested-value[{{ val['pred'] }}]" object="{{ nested }}"></sw-object>
             </template>
           </template>
         </td>
@@ -39,13 +39,6 @@ Polymer.require('sw-object', ['actions', 'underscore'], function(actions, _) {
   var NavActions = actions.NavActions;
 
   return {
-    ready: function() {
-      if(this.$.link) {
-        this.$.link.addEventListener('click', function(ev) {
-          return ev.preventDefault();
-        });
-      }
-    },
     getValues: function(obj) {
       return _.chain(obj)
       .map(function(p, k) { return { pred: k, val: p }; })

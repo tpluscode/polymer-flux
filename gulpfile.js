@@ -10,7 +10,7 @@ gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
-gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
+gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch' ]);
 
 gulp.task('connect', function() {
   connect.server({

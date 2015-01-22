@@ -4,6 +4,8 @@ var gulp = require('gulp'),
     del = require('del'),
     jshint = require('gulp-jshint');
 
+require('web-component-tester').gulp.init(gulp);
+
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });

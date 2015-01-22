@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../node_modules/web-component-tester/browser.js"></script>
+  <script src="../bower_components/requirejs/require.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="../src/components/sw-object.html">
+</head>
+<body>
+  <sw-object id="object"></sw-object>
+
+  <script>
+  requirejs.config({
+    baseUrl: '/src/js/',
+    paths: {
+      jsonld: '/dist/lib/jsonld/js/jsonld',
+      'es6-promise': '/dist/lib/es6-promise/promise',
+      reflux: '/dist/lib/reflux/dist/reflux',
+      underscore: '/dist/lib/underscore/underscore',
+      react: '/dist/lib/react/react',
+      jquery: '/dist/lib/jquery/dist/jquery'
+    }
+  });
+
+  describe('<sw-object>', function() {
+    var sut = document.getElementById('object');
+
+    beforeEach(function(done) {
+      sut.object = {
+        'http://schema.org/name': [ { '@value': 'Tomasz' } ],
+        'http://schema.org/knows': [ { '@id': 'http://example.com/Jacek' } ]
+      };
+
+      flush(done);
+    });
+
+    it('navigates on click', function(done) {
+      var timeout = setTimeout(function() {
+        assert(false, 'navigation never happened');
+      }, 500);
+
+      var action = require('actions').NavActions.navigateTo;
+      action.emitter.removeAllListeners();
+      action.listen(function(uri) {
+        clearTimeout(timeout);
+        assert(uri == 'http://example.com/Jacek', 'navigated to wrong URI');
+        done();
+      });
+
+      sut.shadowRoot.getElementsByTagName('a')[0].click();
+    });
+  });
+  </script>
+</body>
+</html>

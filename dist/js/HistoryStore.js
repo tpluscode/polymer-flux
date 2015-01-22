@@ -15,17 +15,17 @@
 
     return Reflux.createStore({
       init: function() {
-        this.listenTo(NavActions.navigateTo.success, this.pushHistory.bind(this));
+        this.listenTo(NavActions.navigateTo, this.pushHistory.bind(this));
         window.addEventListener('popstate', this.restoreHistory);
       },
       restoreHistory: function(ev) {
         NavActions.navigateTo(ev.state);
       },
-      pushHistory: function(state) {
+      pushHistory: function(resourceUri) {
         var uri  = getOrigin() + document.location.pathname;
-        if (state && state['@id'] && state['@id'] !== history.state) {
-          uri += '?uri=' + state['@id'];
-          history.pushState(state['@id'], '', uri);
+        if (resourceUri && resourceUri !== history.state) {
+          uri += '?uri=' + resourceUri;
+          history.pushState(resourceUri, '', uri);
         }
       }
     });

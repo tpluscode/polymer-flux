@@ -12,7 +12,7 @@
   }
   </style>
   <table>
-    <template repeat="{{ val in getValues(object) }}">
+    <template repeat="{{ val in object | getValues }}">
       <tr>
         <th>
           {{ val['pred'] }}

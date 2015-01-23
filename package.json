@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "browserify",
-    "preinstall": "bower install",
+    "postinstall": "bower install",
     "test": "gulp test:local"
   },
   "devDependencies": {

@@ -29,8 +29,24 @@
 </head>
 <body unresolved>
   <hydra-router baseUri='http://test.wikibus.org/'>
-    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' ></hydra-route>
-    <hydra-route id='no-type-matches-any' ></hydra-route>
+    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
+      <template>
+        <ld-resource resource="{{ model }}"></ld-resource>
+      </template>
+    </hydra-route>
+    <hydra-route type='http://wikibus.org/ontology#Book'>
+      <template>
+        Book "{{ model['http://purl.org/dc/terms/title'][0]['@value'] }}"
+        by {{ model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value'] }}
+        <br />
+        <schema-image image='{{ model["http://schema.org/image"][0] }}'></schema-image>
+      </template>
+    </hydra-route>
+    <hydra-route id='no-type-matches-any'>
+      <template>
+        <ld-resource resource="{{ model }}"></ld-resource>
+      </template>
+    </hydra-route>
   </hydra-router>
 </body>
 </html>

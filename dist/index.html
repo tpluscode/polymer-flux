@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Linked data browser</title>
   <script src="lib/webcomponentsjs/webcomponents.js"></script>
-  <script src="lib/requirejs/require.js" data-main="js/require.config.js"></script>
+  <script src="js/require.config.js"></script>
+  <script src="lib/requirejs/require.js"></script>
   <script>
 
 
   require(['js/app.js']);
   </script>
+  <script src="components/ld-router.js"></script>
   <link rel="import" href="lib/polymer/polymer.html" />
   <link rel="import" href="components/ld-browser.html" />
 
@@ -26,6 +28,9 @@
   <![endif]-->
 </head>
 <body unresolved>
-  <ld-browser></ld-browser>
+  <hydra-router basePath='/dist' baseUri='http://test.wikibus.org/'>
+    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' ></hydra-route>
+    <hydra-route id='no-type-matches-any' ></hydra-route>
+  </hydra-router>
 </body>
 </html>

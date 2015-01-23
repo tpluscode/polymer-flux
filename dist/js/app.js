@@ -1,4 +1,4 @@
-define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {
+define(['ModelStore', 'es6-promise'], function() {
   'use strict';
 
   function getQueryVariable(variable)
@@ -11,15 +11,4 @@ define(['HistoryStore', 'ModelStore', 'es6-promise'], function() {
     }
     return(false);
   }
-
-  window.addEventListener('polymer-ready', function() {
-    var url = getQueryVariable('uri');
-    if (!url) {
-      url = 'http://test.wikibus.org/';
-    }
-
-    var browser = document.querySelector('ld-browser');
-    browser.uri = url;
-    browser.load();
-  });
 });

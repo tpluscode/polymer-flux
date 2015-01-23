@@ -1,4 +1,4 @@
-requirejs.config({
+var require = {
   baseUrl: '/dist/js/',
   paths: {
     jsonld: '/dist/lib/jsonld/js/jsonld',
@@ -8,4 +8,4 @@ requirejs.config({
     react: '/dist/lib/react/react',
     jquery: '/dist/lib/jquery/dist/jquery'
   }
-});
+};

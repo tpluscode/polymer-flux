@@ -22,9 +22,9 @@
         NavActions.navigateTo(ev.state);
       },
       pushHistory: function(resourceUri) {
-        var uri  = getOrigin() + document.location.pathname;
+        var uri  = getOrigin() + "/dist/";
         if (resourceUri && resourceUri !== history.state) {
-          uri += '?uri=' + resourceUri;
+          uri += resourceUri;//.replace(/^http:\/\/test\.wikibus\.org\//, '');
           history.pushState(resourceUri, '', uri);
         }
       }

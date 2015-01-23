@@ -1,11 +1,11 @@
 var require = {
-  baseUrl: '/dist/js/',
+  baseUrl: '/js/',
   paths: {
-    jsonld: '/dist/lib/jsonld/js/jsonld',
-    'es6-promise': '/dist/lib/es6-promise/promise',
-    reflux: '/dist/lib/reflux/dist/reflux',
-    underscore: '/dist/lib/underscore/underscore',
-    react: '/dist/lib/react/react',
-    jquery: '/dist/lib/jquery/dist/jquery'
+    jsonld: '/lib/jsonld/js/jsonld',
+    'es6-promise': '/lib/es6-promise/promise',
+    reflux: '/lib/reflux/dist/reflux',
+    underscore: '/lib/underscore/underscore',
+    react: '/lib/react/react',
+    jquery: '/lib/jquery/dist/jquery'
   }
 };

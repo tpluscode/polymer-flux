@@ -2,9 +2,11 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     bowerFiles = require('main-bower-files'),
     del = require('del'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    historyApiFallback = require('connect-history-api-fallback');
 
 require('web-component-tester').gulp.init(gulp);
+historyApiFallback.setLogger(console.log.bind(console));
 
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
@@ -14,7 +16,12 @@ gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
 
 gulp.task('connect', function() {
   connect.server({
-    livereload: true
+    root: 'dist',
+    middleware: function(connect, opt) {
+      return [
+        historyApiFallback
+      ];
+    }
   });
 });
 

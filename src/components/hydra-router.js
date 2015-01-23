@@ -21,6 +21,8 @@
 
       if (router.hasAttribute('basePath')) {
         router.setAttribute('basePath', '/' + trim(router.getAttribute('basePath'), '/') + '/');
+      } else {
+        router.setAttribute('basePath', '/');
       }
 
       router.stateChangeHandler = stateChange.bind(null, router);

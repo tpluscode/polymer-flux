@@ -6,8 +6,6 @@
     var NavActions = actions.NavActions;
     var jsonldp = jsonld.promises;
 
-    var currentModel = { };
-
     var executeXhr = function(uri) {
       return $.ajax({
           type: 'GET',
@@ -26,13 +24,24 @@
       loadResource: function(uri) {
         var self = this;
 
-        NavActions.beforeLoad(currentModel);
+        if (self.request) {
+          if (self.currentUri === uri) {
+            return;
+          }
 
-        executeXhr(uri).then(function(res) {
+          self.request.abort();
+        }
+
+        self.currentUri = uri;
+        self.request = executeXhr(uri)
+
+        self.request.then(function(res) {
+          self.request = null;
           return jsonldp.expand(res).then(function(expanded) {
             NavActions.navigateTo.success(expanded[0]);
           });
         }, function (request) {
+          self.request = null;
           NavActions.navigateTo.failed(request.status);
         });
       }

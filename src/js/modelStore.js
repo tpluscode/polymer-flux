@@ -33,7 +33,7 @@
         }
 
         self.currentUri = uri;
-        self.request = executeXhr(uri)
+        self.request = executeXhr(uri);
 
         self.request.then(function(res) {
           self.request = null;

@@ -19,45 +19,7 @@
       }
       router.isInitialized = true;
 
-      if (router.hasAttribute('basePath')) {
-        router.setAttribute('basePath', '/' + trim(router.getAttribute('basePath'), '/') + '/');
-      } else {
-        router.setAttribute('basePath', '/');
-      }
-
-      router.stateChangeHandler = stateChange.bind(null, router);
-      window.addEventListener('popstate', router.stateChangeHandler, false);
-      if (isIE) {
-        // IE bug. A hashchange is supposed to trigger a popstate event, making popstate the only event you
-        // need to listen to. That's not the case in IE so we make another event listener for it.
-        window.addEventListener('hashchange', router.stateChangeHandler, false);
-      }
-
-      NavActions.navigateTo.listen(onNavigating.bind(null, router));
       NavActions.navigateTo.success.listen(navigationComplete.bind(null, router));
-
-      stateChange(router);
-    };
-
-    // clean up global event listeners
-    HydraRouter.detachedCallback = function() {
-      window.removeEventListener('popstate', this.stateChangeHandler, false);
-      if (isIE) {
-        window.removeEventListener('hashchange', this.stateChangeHandler, false);
-      }
-    };
-
-    var stateChange = function stateChange(router) {
-      NavActions.navigateTo(getResourceUri(router));
-    };
-
-    var onNavigating = function(router, resourceUri) {
-      var uri = router.getAttribute('basePath');
-      if (resourceUri !== history.state) {
-        var baseUri = router.getAttribute('baseUri');
-        uri += resourceUri.replace(new RegExp('^' + baseUri), '');
-        history.pushState(resourceUri, '', uri);
-      }
     };
 
     var navigationComplete = function(router, newModel) {
@@ -143,16 +105,6 @@
     function routeHasType(type) {
       /*jshint validthis:true */
       return this.getAttribute('type') === type;
-    }
-
-    function getResourceUri(router) {
-      var resourcePath = document.location.pathname;
-
-      if (router.hasAttribute('basePath')) {
-        resourcePath = resourcePath.replace(new RegExp('^' + router.getAttribute('basePath')), router.getAttribute('baseUri'));
-      }
-
-      return resourcePath;
     }
 
     function trimLeft(str, charlist) {

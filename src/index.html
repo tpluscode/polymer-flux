@@ -13,6 +13,7 @@
     require(['/js/app.js']);
   </script>
   <script src="/components/hydra-router.js"></script>
+  <script src="/components/HistoryStore.js"></script>
   <link rel="import" href="/lib/polymer/polymer.html" />
   <link rel="import" href="/components/ld-browser.html" />
   <!-- Bootstrap -->
@@ -26,7 +27,8 @@
   <![endif]-->
 </head>
 <body unresolved>
-  <hydra-router baseUri='http://test.wikibus.org/'>
+  <hydra-router>
+    <ld-history baseUri='http://test.wikibus.org/'></ld-history>
     <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
       <template>
         <ld-resource resource="{{ model }}"></ld-resource>

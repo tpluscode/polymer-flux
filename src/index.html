@@ -5,7 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Linked data browser</title>
-  <script src="/lib/webcomponentsjs/webcomponents.js"></script>
+  <script>
+  var wc = document.registerElement &&
+  window.HTMLTemplateElement &&
+  window.ShadowRoot &&
+  window.WeakMap &&
+  window.MutationObserver &&
+  ("import" in document.createElement("link"));
+  if(!wc) {
+    var polyfill = document.createElement("script");
+    polyfill.src = "/lib/webcomponentsjs/webcomponents.js";
+    document.head.appendChild(polyfill);
+  }
+  </script>
   <script src="/lib/document-register-element/build/document-register-element.js"></script>
   <script src="/js/require.config.js"></script>
   <script src="/lib/requirejs/require.js"></script>
@@ -17,7 +29,7 @@
   <link rel="import" href="/lib/polymer/polymer.html" />
   <link rel="import" href="/components/ld-browser.html" />
   <!-- Bootstrap -->
-  <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,8 +39,8 @@
   <![endif]-->
 </head>
 <body unresolved>
+  <ld-history baseUri='http://test.wikibus.org/'></ld-history>
   <hydra-router>
-    <ld-history baseUri='http://test.wikibus.org/'></ld-history>
     <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
       <template>
         <ld-resource resource="{{ model }}"></ld-resource>

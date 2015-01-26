@@ -21,44 +21,50 @@
 <body unresolved>
   <ld-history baseUri='http://test.wikibus.org/'></ld-history>
 
-  <hydra-router>
-    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'>
-      <template>
-        Collection menu here
-      </template>
-    </hydra-route>
-    <hydra-route type='http://wikibus.org/ontology#Book'>
-      <template>
-        Book menu here
-      </template>
-    </hydra-route>
-    <hydra-route type='http://wikibus.org/ontology#Source'>
-      <template>
-        Source menu here
-      </template>
-    </hydra-route>
-    <hydra-route><template></template></hydra-route>
-  </hydra-router>
+  <div horizontal layout>
+    <hydra-router flex two>
+      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'>
+        <template>
+          Collection menu here
+        </template>
+      </hydra-route>
+      <hydra-route type='http://wikibus.org/ontology#Book'>
+        <template>
+          Book menu here
+        </template>
+      </hydra-route>
+      <hydra-route type='http://wikibus.org/ontology#Source'>
+        <template>
+          Source menu here
+        </template>
+      </hydra-route>
+      <hydra-route><template></template></hydra-route>
+    </hydra-router>
 
-  <hydra-router>
-    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
-      <template>
-        <ld-resource resource="{{ model }}"></ld-resource>
-      </template>
-    </hydra-route>
-    <hydra-route type='http://wikibus.org/ontology#Book'>
-      <template>
-        Book "{{ model['http://purl.org/dc/terms/title'][0]['@value'] }}"
-        by {{ model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value'] }}
-        <br />
-        <schema-image image='{{ model["http://schema.org/image"][0] }}'></schema-image>
-      </template>
-    </hydra-route>
-    <hydra-route id='no-type-matches-any'>
-      <template>
-        <ld-resource resource="{{ model }}"></ld-resource>
-      </template>
-    </hydra-route>
-  </hydra-router>
+    <hydra-router flex twelve>
+      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
+        <template>
+          <ld-resource resource="{{ model }}"></ld-resource>
+        </template>
+      </hydra-route>
+      <hydra-route type='http://wikibus.org/ontology#Book'>
+        <template>
+          Book "{{ model['http://purl.org/dc/terms/title'][0]['@value'] }}"
+          by {{ model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value'] }}
+          <br />
+          <schema-image image='{{ model["http://schema.org/image"][0] }}'></schema-image>
+        </template>
+      </hydra-route>
+      <hydra-route id='no-type-matches-any'>
+        <template>
+          <ld-resource resource="{{ model }}"></ld-resource>
+        </template>
+      </hydra-route>
+    </hydra-router>
+
+    <div flex>
+      wtf
+    </div>
+  </div>
 </body>
 </html>

@@ -5,22 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Linked data browser</title>
-  <script>
-  var wc = document.registerElement &&
-  window.HTMLTemplateElement &&
-  window.ShadowRoot &&
-  window.WeakMap &&
-  window.MutationObserver &&
-  ("import" in document.createElement("link"));
-  if(!wc) {
-    var polyfill = document.createElement("script");
-    polyfill.src = "/lib/webcomponentsjs/webcomponents.js";
-    document.head.appendChild(polyfill);
-  }
-  </script>
-  <!--[if lte IE 9]>
-  <script src="/lib/document-register-element/build/document-register-element.js"></script>
-  <![endif]-->
+  <script src="/lib/webcomponentsjs/webcomponents.js"></script>
   <script src="/js/require.config.js"></script>
   <script src="/lib/requirejs/require.js"></script>
   <script>
@@ -32,16 +17,29 @@
   <link rel="import" href="/components/ld-browser.html" />
   <!-- Bootstrap -->
   <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 <body unresolved>
   <ld-history baseUri='http://test.wikibus.org/'></ld-history>
+
+  <hydra-router>
+    <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'>
+      <template>
+        Collection menu here
+      </template>
+    </hydra-route>
+    <hydra-route type='http://wikibus.org/ontology#Book'>
+      <template>
+        Book menu here
+      </template>
+    </hydra-route>
+    <hydra-route type='http://wikibus.org/ontology#Source'>
+      <template>
+        Source menu here
+      </template>
+    </hydra-route>
+    <hydra-route><template></template></hydra-route>
+  </hydra-router>
+
   <hydra-router>
     <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
       <template>

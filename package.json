@@ -3,8 +3,7 @@
   "dependencies": {
     "browserify": "^8.1.0",
     "connect-history-api-fallback": "0.0.5",
-    "express": "^4.11.0",
-    "reflux": "^0.2.3"
+    "express": "^4.11.0"
   },
   "scripts": {
     "build": "browserify",

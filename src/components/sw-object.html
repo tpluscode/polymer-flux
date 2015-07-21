@@ -1,56 +1,53 @@
-<script src="polymer.require.js"></script>
-
-<polymer-element name="sw-object" attributes="object">
-  <template>
-  <style>
-  * {
-    font-size: small;
-  }
-
-  th {
-    text-align: right;
-  }
-  </style>
-  <table>
-    <template repeat="{{ val in object | getValues }}">
-      <tr>
-        <th>
-          {{ val['pred'] }}
-        </th>
-        <td>
-          <template repeat="{{ nested in val['val'] }}">
-            <template if="{{ nested['@value'] }}">
-              {{ nested['@value'] }}
-            </template>
-            <template if="{{ nested['@id'] }}">
-              <a href="{{ nested['@id'] }}" on-click="{{ selectResource }}">{{ nested['@id'] }}</a>
-            </template>
-            <template if="{{ !nested['@value'] }}">
-              <sw-object object="{{ nested }}"></sw-object>
-            </template>
-          </template>
-        </td>
-      </tr>
+<dom-module id="sw-object">
+    <template>
+        <table>
+        <template is="dom-repeat" items="{{objects}}">
+            <tr>
+                <th>{{arrayItem(item, 'pred')}}</th>
+                <td>
+                    <template is="dom-repeat" items="{{arrayItem(item, 'val')}}">
+                        <template is="dom-if" if="{{arrayItem(item, '@value')}}">{{arrayItem(item, '@value')}}</template>
+                        <template is="dom-if" if="{{arrayItem(item, '@id')}}">
+                            <a href="{{arrayItem(item, '@id')}}" on-click="{{selectResource}}">{{arrayItem(item, '@id')}}</a>
+                        </template>
+                        <template is="dom-if" if="{{!arrayItem(item, '@value')}}">
+                            <sw-object object="{{item}}"></sw-object>
+                        </template>
+                    </template>
+                </td>
+            </tr>
+        </template>
+        </table>
     </template>
-  </table>
-</template>
-<script>
-Polymer.require('sw-object', ['actions', 'underscore'], function(actions, _) {
-  var NavActions = actions.NavActions;
+</dom-module>
 
-  return {
-    getValues: function(obj) {
-      return _.chain(obj)
-      .map(function(p, k) { return { pred: k, val: p }; })
-      .reject(function (o) { return o.pred[0] == "@"; })
-      .reject(function (o) { return o.pred == "http://schema.org/image"; })
-      .value();
-    },
-    selectResource: function(ev) {
-      NavActions.navigateTo(ev.target.href);
-      return ev.preventDefault();
-    }
-  };
-});
+<script>
+    require(['underscore'], function(_) {
+        Polymer({
+            is: 'sw-object',
+            properties: {
+                object: Object,
+                objects: {
+                    computed: 'getValues(object)'
+                }
+            },
+            arrayItem: function(item, idx){
+              return item[idx];
+            },
+            getValues: function(obj) {
+                return _.chain(obj)
+                        .map(function(p, k) { return { pred: k, val: p }; })
+                        .reject(function (o) { return o.pred[0] == "@"; })
+                        .reject(function (o) { return o.pred == "http://schema.org/image"; })
+                        .value();
+            },
+            selectResource: function(ev) {
+                NavActions.navigateTo(ev.target.href);
+                return ev.preventDefault();
+            }
+        });
+
+    });
 </script>
-</polymer-element>
+
+

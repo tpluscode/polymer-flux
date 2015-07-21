@@ -1,31 +1,32 @@
-<link rel="import" href="../lib/zdk-modal/zdk-modal.html">
-
-<polymer-element name="schema-image" attributes="image">
+<dom-module id="schema-image">
   <template>
-    <template if="{{ image }}">
+    <template if="{{image}}">
       <style>
         img {
           cursor: pointer;
         }
       </style>
-      <img src="{{ image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value'] }}"
-      alt="thumbnail" on-click="{{ open }}" id="thumbnail" />
+      <img src="{{image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value']}}"
+      alt="thumbnail" on-click="{{open}}" id="thumbnail" />
       <div>
         <zdk-modal id="modal">
-          <img alt="large" src="{{ image['http://schema.org/contentUrl'][0]['@value'] }}"
-          on-click="{{ hide }}" />
+          <img alt="large" src="{{image['http://schema.org/contentUrl'][0]['@value']}}"
+          on-click="{{hide}}" />
         </zdk-modal>
       </div>
     </template>
   </template>
+
+</dom-module>
+
 <script>
-Polymer('schema-image', {
-  open: function() {
-    this.$.modal.show();
-  },
-  hide: function() {
-    this.$.modal.hide();
-  }
-});
+    Polymer({
+        is: 'schema-image',
+        open: function() {
+            this.$.modal.show();
+        },
+        hide: function() {
+            this.$.modal.hide();
+        }
+    });
 </script>
-</polymer-element>

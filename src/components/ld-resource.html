@@ -1,11 +1,23 @@
 <link rel="import" href="schema-image.html" />
 <link rel="import" href="sw-object.html" />
 
-<polymer-element name="ld-resource" attributes="resource" noscript>
-  <template>
-    <sw-object object="{{ resource }}"></sw-object>
-    <template if="{{ resource['http://schema.org/image'] }}">
-      <schema-image image="{{ resource['http://schema.org/image'][0] }}"></schema-image>
+<dom-module id="ld-resource">
+    <template>
+        <sw-object object="{{resource}}"></sw-object>
+        <template is="dom-if" if="{{resource['http://schema.org/image']}}">
+            <schema-image image="{{resource['http://schema.org/image'][0]}}"></schema-image>
+        </template>
     </template>
-  </template>
-</polymer-element>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'ld-resource',
+        properties: {
+            resource: Object
+        },
+        created: function() {
+            console.log('created');
+        }
+    })
+</script>

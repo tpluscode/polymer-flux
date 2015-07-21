@@ -51,14 +51,21 @@
       //  importAndActivate(router, route.getAttribute('import'), route, url, eventDetail);
       }
       // pre-loaded custom element
-      else if (route.hasAttribute('element')) {
-        //activateCustomElement(router, route.getAttribute('element'), route, url, eventDetail);
+      if (route.hasAttribute('element')) {
+        activateCustomElement(router, route.getAttribute('element'), route, model, route.getAttribute('attribute'));
       }
       // inline template
       else if (route.firstElementChild && route.firstElementChild.tagName === 'TEMPLATE') {
         activateTemplate(router, route.firstElementChild, route, model);
       }
     }
+
+      function activateCustomElement(router, elementName, route, model, attributeName) {
+          var customElement = document.createElement(elementName);
+          var model1 = createRouteModel(router, route, model);
+          customElement[attributeName] = model;
+          activateElement(router, customElement);
+      }
 
     // Create an instance of the template
     function activateTemplate(router, template, route, model) {

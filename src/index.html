@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Linked data browser</title>
-  <script src="/lib/webcomponentsjs/webcomponents.js"></script>
+  <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
   <script src="/js/require.config.js"></script>
   <script src="/lib/requirejs/require.js"></script>
   <script>
     require(['/js/app.js']);
   </script>
   <script src="/components/hydra-router.js"></script>
-  <script src="/components/HistoryStore.js"></script>
+    <script src="/components/HistoryStore.js"></script>
   <link rel="import" href="/lib/polymer/polymer.html" />
-  <link rel="import" href="/components/ld-browser.html" />
+    <link href="/components/ld-resource.html" rel="import" />
   <!-- Bootstrap -->
   <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
@@ -42,29 +42,21 @@
     </hydra-router>
 
     <hydra-router flex twelve>
-      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection' >
-        <template>
-          <ld-resource resource="{{ model }}"></ld-resource>
-        </template>
+      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'
+                   element="ld-resource"
+                   attribute="resource">
       </hydra-route>
       <hydra-route type='http://wikibus.org/ontology#Book'>
         <template>
-          Book "{{ model['http://purl.org/dc/terms/title'][0]['@value'] }}"
-          by {{ model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value'] }}
+          Book "<span>{{model['http://purl.org/dc/terms/title'][0]['@value']}}</span>"
+          by <span>{{model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value']}}</span>
           <br />
-          <schema-image image='{{ model["http://schema.org/image"][0] }}'></schema-image>
+          <schema-image image='{{model["http://schema.org/image"][0]}}'></schema-image>
         </template>
       </hydra-route>
-      <hydra-route id='no-type-matches-any'>
-        <template>
-          <ld-resource resource="{{ model }}"></ld-resource>
-        </template>
+      <hydra-route id='no-type-matches-any' element="ld-resource" attribute="resource">
       </hydra-route>
     </hydra-router>
-
-    <div flex>
-      wtf
-    </div>
   </div>
 </body>
 </html>

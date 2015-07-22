@@ -1,3 +1,5 @@
+<link rel="import" href="../lib/paper-dialog/paper-dialog.html"/>
+
 <dom-module id="schema-image">
     <style>
         img {
@@ -9,9 +11,9 @@
     <template is="dom-if" if="{{image}}">
       <img src="{{thumbnail}}" alt="thumbnail" on-click="open" id="thumbnail" />
       <div>
-        <zdk-modal id="modal">
+        <paper-dialog id="modal">
           <img alt="large" src="{{fullSize}}" on-click="hide" />
-        </zdk-modal>
+        </paper-dialog>
       </div>
     </template>
   </template>

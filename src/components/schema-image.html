@@ -1,17 +1,16 @@
 <dom-module id="schema-image">
-  <template>
-    <template if="{{image}}">
-      <style>
+    <style>
         img {
-          cursor: pointer;
+            cursor: pointer;
         }
-      </style>
-      <img src="{{image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value']}}"
-      alt="thumbnail" on-click="{{open}}" id="thumbnail" />
+    </style>
+
+  <template>
+    <template is="dom-if" if="{{image}}">
+      <img src="{{thumbnail}}" alt="thumbnail" on-click="open" id="thumbnail" />
       <div>
         <zdk-modal id="modal">
-          <img alt="large" src="{{image['http://schema.org/contentUrl'][0]['@value']}}"
-          on-click="{{hide}}" />
+          <img alt="large" src="{{fullSize}}" on-click="hide" />
         </zdk-modal>
       </div>
     </template>
@@ -22,11 +21,26 @@
 <script>
     Polymer({
         is: 'schema-image',
+        properties: {
+            image: Object,
+            thumbnail: {
+                computed: 'getThumbnail(image)'
+            },
+            getFullSize: {
+                computed: 'getFullSize(image)'
+            }
+        },
         open: function() {
             this.$.modal.show();
         },
         hide: function() {
             this.$.modal.hide();
+        },
+        getThumbnail: function(image){
+            return image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value'];
+        },
+        getFullSize: function(image){
+            return image['http://schema.org/contentUrl'][0]['@value'];
         }
     });
 </script>

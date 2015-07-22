@@ -4,8 +4,8 @@
 <dom-module id="ld-resource">
     <template>
         <sw-object object="{{resource}}"></sw-object>
-        <template is="dom-if" if="{{resource['http://schema.org/image']}}">
-            <schema-image image="{{resource['http://schema.org/image'][0]}}"></schema-image>
+        <template is="dom-if" if="{{hasImage}}">
+            <schema-image image="{{image}}"></schema-image>
         </template>
     </template>
 </dom-module>
@@ -14,10 +14,25 @@
     Polymer({
         is: 'ld-resource',
         properties: {
-            resource: Object
+            resource: {
+                type: Object,
+                notify: true
+            },
+            hasImage: {
+                computed: 'resHasImage(resource)'
+            },
+            image: {
+                computed: 'getImage(resource)'
+            }
         },
         created: function() {
             console.log('created');
+        },
+        resHasImage: function(resource){
+            return !!resource['http://schema.org/image'];
+        },
+        getImage: function(resource){
+            return resource['http://schema.org/image'][0];
         }
     })
 </script>

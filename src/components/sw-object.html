@@ -1,5 +1,6 @@
 <dom-module id="sw-object">
     <template>
+        <wb-actions id="actions"></wb-actions>
         <table>
         <template is="dom-repeat" items="{{objects}}">
             <tr>
@@ -8,7 +9,7 @@
                     <template is="dom-repeat" items="{{arrayItem(item, 'val')}}">
                         <template is="dom-if" if="{{arrayItem(item, '@value')}}">{{arrayItem(item, '@value')}}</template>
                         <template is="dom-if" if="{{arrayItem(item, '@id')}}">
-                            <a href="{{arrayItem(item, '@id')}}" on-click="{{selectResource}}">{{arrayItem(item, '@id')}}</a>
+                            <a href="{{arrayItem(item, '@id')}}" on-click="selectResource">{{arrayItem(item, '@id')}}</a>
                         </template>
                         <template is="dom-if" if="{{!arrayItem(item, '@value')}}">
                             <sw-object object="{{item}}"></sw-object>
@@ -42,7 +43,7 @@
                         .value();
             },
             selectResource: function(ev) {
-                NavActions.navigateTo(ev.target.href);
+                this.$.actions.navigateTo(ev.target.href);
                 return ev.preventDefault();
             }
         });

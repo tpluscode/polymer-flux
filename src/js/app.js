@@ -1,1 +1,1 @@
-define(['ModelStore', 'es6-promise'], function() { });
+define(['es6-promise'], function() { });

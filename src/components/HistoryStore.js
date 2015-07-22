@@ -1,9 +1,9 @@
 (function() {
 
-  require(['reflux', 'actions'], function(Reflux, actions) {
+  require(['reflux'], function(Reflux) {
     'use strict';
 
-    var NavActions = actions.NavActions;
+    var NavActions = document.querySelector('wb-actions');
 
     var HistoryElement = Object.create(HTMLElement.prototype);
 
@@ -14,9 +14,13 @@
         this.setAttribute('basePath', '/');
       }
 
-      NavActions.navigateTo.listen(this.pushHistory.bind(this));
-      window.addEventListener('popstate', this.restoreHistory);
-      NavActions.navigateTo(getResourceUri(this));
+        var self = this;
+        window.setTimeout(function(){
+            NavActions.navigateTo.listen(self.pushHistory.bind(self));
+            window.addEventListener('popstate', self.restoreHistory);
+            NavActions.navigateTo(getResourceUri(self));
+        }, 1000);
+
     };
 
     HistoryElement.restoreHistory = function(ev) {

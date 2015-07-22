@@ -1,0 +1,56 @@
+<link rel="import" href="actions.html"/>
+<link rel="import" href="../lib/iron-ajax/iron-ajax.html"/>
+
+<dom-module id="wb-stores-model">
+    <template>
+        <iron-ajax id="loadModel"
+                   headers='{"Accept": "application/ld+json"}'
+                   contentType="text/plain"
+                   on-response="handleLoadSuccess"
+                   on-error="handleLoadError"></iron-ajax>
+        <wb-actions id="NavActions"></wb-actions>
+    </template>
+</dom-module>
+
+<script>
+
+    require(['reflux', 'jsonld', 'es6-promise'], function (Reflux, jsonld, promise) {
+        'use strict';
+        var jsonldp = jsonld.promises;
+
+        var store;
+
+        function createStore(element) {
+            if (store) {
+                return;
+            }
+
+            store = Reflux.createStore({
+                init: function () {
+                    this.listenTo(element.$.NavActions.navigateTo, this.loadResource);
+                },
+                loadResource: function (uri) {
+                    element.$.loadModel.url = uri;
+                    element.$.loadModel.generateRequest();
+                }
+            });
+        }
+
+        Polymer({
+            is: 'wb-stores-model',
+            ready: function () {
+                createStore(this);
+            },
+            handleLoadSuccess: function (res) {
+                var self = this;
+                jsonldp.expand(res.currentTarget.lastResponse).then(function (expanded) {
+                    self.$.NavActions.navigateTo.success(expanded[0]);
+                });
+            },
+            handleLoadError: function (request) {
+                this.$.NavActions.navigateTo.failed(request.status);
+            }
+        });
+    });
+</script>
+

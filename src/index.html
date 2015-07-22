@@ -15,10 +15,14 @@
     <script src="/components/HistoryStore.js"></script>
   <link rel="import" href="/lib/polymer/polymer.html" />
     <link href="/components/ld-resource.html" rel="import" />
+    <link rel="import" href="/components/actions.html" />
+    <link rel="import" href="/components/modelStore.html" />
   <!-- Bootstrap -->
   <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body unresolved>
+  <wb-actions></wb-actions>
+  <wb-stores-model></wb-stores-model>
   <ld-history baseUri='http://test.wikibus.org/'></ld-history>
 
   <div horizontal layout>

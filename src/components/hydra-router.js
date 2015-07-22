@@ -3,8 +3,8 @@
 
   var isIE = 'ActiveXObject' in window;
 
-  require(['actions', 'underscore', 'ModelStore'], function(actions, _) {
-    var NavActions = actions.NavActions;
+  require(['underscore'], function(_) {
+    var NavActions = document.querySelector('wb-actions');
 
     var HydraRouter = Object.create(HTMLElement.prototype);
 
@@ -19,7 +19,9 @@
       }
       router.isInitialized = true;
 
-      NavActions.navigateTo.success.listen(navigationComplete.bind(null, router));
+        window.setTimeout(function(){
+          NavActions.navigateTo.success.listen(navigationComplete.bind(null, router));
+      }, 1000);
     };
 
     var navigationComplete = function(router, newModel) {

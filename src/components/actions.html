@@ -1,0 +1,22 @@
+<script>
+
+    require(['reflux'], function(Reflux){
+        var actions = Reflux.createActions({
+            'navigateTo': { children: [ 'success', 'failed' ] }
+        });
+
+        Polymer({
+            is: 'wb-actions',
+            properties: {
+                navigateTo: {
+                    type: Function,
+                    readOnly: true,
+                    value: function() {
+                        return actions.navigateTo;
+                    }
+                }
+            }
+        });
+    });
+
+</script>

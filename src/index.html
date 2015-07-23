@@ -50,14 +50,6 @@
                    element="ld-resource"
                    attribute="resource">
       </hydra-route>
-      <hydra-route type='http://wikibus.org/ontology#Book'>
-        <template>
-          Book "<span>{{model['http://purl.org/dc/terms/title'][0]['@value']}}</span>"
-          by <span>{{model['http://schema.org/author'][0]['http://schema.org/name'][0]['@value']}}</span>
-          <br />
-          <schema-image image='{{model["http://schema.org/image"][0]}}'></schema-image>
-        </template>
-      </hydra-route>
       <hydra-route id='no-type-matches-any' element="ld-resource" attribute="resource">
       </hydra-route>
     </hydra-router>

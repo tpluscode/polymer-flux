@@ -8,14 +8,12 @@
     </style>
 
   <template>
-    <template is="dom-if" if="{{image}}">
       <img src="{{thumbnail}}" alt="thumbnail" on-click="open" id="thumbnail" />
       <div>
-        <paper-dialog id="modal">
+        <paper-dialog id="modal" modal>
           <img alt="large" src="{{fullSize}}" on-click="hide" />
         </paper-dialog>
       </div>
-    </template>
   </template>
 
 </dom-module>
@@ -28,15 +26,15 @@
             thumbnail: {
                 computed: 'getThumbnail(image)'
             },
-            getFullSize: {
+            fullSize: {
                 computed: 'getFullSize(image)'
             }
         },
         open: function() {
-            this.$.modal.show();
+            this.$.modal.toggle();
         },
         hide: function() {
-            this.$.modal.hide();
+            this.$.modal.toggle();
         },
         getThumbnail: function(image){
             return image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value'];

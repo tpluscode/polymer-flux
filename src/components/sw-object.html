@@ -1,11 +1,11 @@
 <dom-module id="sw-object">
     <template>
         <wb-actions id="actions"></wb-actions>
-        <table>
+        <ul>
         <template is="dom-repeat" items="{{objects}}">
-            <tr>
-                <th>{{arrayItem(item, 'pred')}}</th>
-                <td>
+            <li>
+                <span>{{arrayItem(item, 'pred')}}</span>:
+
                     <template is="dom-repeat" items="{{arrayItem(item, 'val')}}">
                         <template is="dom-if" if="{{arrayItem(item, '@value')}}">{{arrayItem(item, '@value')}}</template>
                         <template is="dom-if" if="{{arrayItem(item, '@id')}}">
@@ -15,10 +15,11 @@
                             <sw-object object="{{item}}"></sw-object>
                         </template>
                     </template>
-                </td>
-            </tr>
+
+            </li>
         </template>
-        </table>
+
+      </ul>
     </template>
 </dom-module>
 
@@ -50,5 +51,3 @@
 
     });
 </script>
-
-

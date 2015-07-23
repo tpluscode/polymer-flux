@@ -4,7 +4,7 @@
 <dom-module id="ld-resource">
     <template>
         <sw-object object="{{resource}}"></sw-object>
-        <template is="dom-if" if="{{hasImage}}">
+        <template is="dom-repeat" items="{{images}}" as="image">
             <schema-image image="{{image}}"></schema-image>
         </template>
     </template>
@@ -18,21 +18,12 @@
                 type: Object,
                 notify: true
             },
-            hasImage: {
-                computed: 'resHasImage(resource)'
-            },
-            image: {
-                computed: 'getImage(resource)'
+            images: {
+                computed: 'getImages(resource)'
             }
         },
-        created: function() {
-            console.log('created');
-        },
-        resHasImage: function(resource){
-            return !!resource['http://schema.org/image'];
-        },
-        getImage: function(resource){
-            return resource['http://schema.org/image'][0];
+        getImages: function(resource){
+            return resource['http://schema.org/image'];
         }
     })
 </script>

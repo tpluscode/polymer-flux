@@ -7,14 +7,19 @@
         }
     </style>
 
-  <template>
-      <img src="{{thumbnail}}" alt="thumbnail" on-click="open" id="thumbnail" />
-      <div>
-        <paper-dialog id="modal" modal>
-          <img alt="large" src="{{fullSize}}" on-click="hide" />
-        </paper-dialog>
-      </div>
-  </template>
+    <template>
+        <a href="{{fullSize}}" on-click="open">
+            <img src="{{thumbnail}}" alt="thumbnail" id="thumbnail"/>
+        </a>
+
+        <div>
+            <paper-dialog id="modal" modal height="1000">
+                <a href="{{fullSize}}" on-click="hide">
+                    <img alt="large" src="{{fullSize}}"/>
+                </a>
+            </paper-dialog>
+        </div>
+    </template>
 
 </dom-module>
 
@@ -30,16 +35,18 @@
                 computed: 'getFullSize(image)'
             }
         },
-        open: function() {
+        open: function (e) {
             this.$.modal.toggle();
+            e.preventDefault();
         },
-        hide: function() {
+        hide: function (e) {
             this.$.modal.toggle();
+            e.preventDefault();
         },
-        getThumbnail: function(image){
+        getThumbnail: function (image) {
             return image['http://schema.org/thumbnail'][0]['http://schema.org/contentUrl'][0]['@value'];
         },
-        getFullSize: function(image){
+        getFullSize: function (image) {
             return image['http://schema.org/contentUrl'][0]['@value'];
         }
     });

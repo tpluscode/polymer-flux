@@ -39,6 +39,51 @@
     },
     "webcomponentsjs": {
       "main": "webcomponents*.js"
+    },
+    "paper-dialog-behavior": {
+      "main": [
+        "paper-dialog-behavior.html",
+        "paper-dialog-common.css"
+      ]
+    },
+    "promise-polyfill":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "iron-meta":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "iron-flex-layout":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "paper-styles":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "neon-animation":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "iron-overlay-behavior":{
+      "main": [
+        "**/*"
+      ]
+    },
+    "web-animations-js":{
+      "main": [
+        "**/*"
+      ]
     }
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.2",
+    "polymer": "^1.0.0"
   }
 }

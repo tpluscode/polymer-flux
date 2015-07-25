@@ -56,7 +56,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('bower-files', function() {
-  gulp.src(bowerFiles(), { base: 'bower_components' })
+  gulp.src('bower_components/**/*.*', { base: 'bower_components' })
       .pipe(gulpIgnore.exclude("*.map"))
       .pipe(gulp.dest('dist/lib'));
 });

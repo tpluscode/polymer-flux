@@ -8,30 +8,13 @@
   <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
   <script src="/js/require.config.js"></script>
   <script src="/lib/requirejs/require.js"></script>
-  <script src="/components/hydra-router.js"></script>
-    <script src="/components/HistoryStore.js"></script>
-  <link rel="import" href="/lib/polymer/polymer.html" />
-    <link rel="import" href="/components/main-content.html" />
-    <link rel="import" href="/components/wb-side-content.html" />
+  <link rel="import" href="components/wb-surfer.html" />
   <!-- Bootstrap -->
   <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body unresolved>
 
-  <ld-history baseUri='http://test.wikibus.org/'></ld-history>
-
-  <div horizontal layout>
-
-      <div flex two>
-          <wb-side-content></wb-side-content>
-      </div>
-
-    <div flex twelve>
-
-        <wb-main-content></wb-main-content>
-
-    </div>
-  </div>
+  <wb-surfer></wb-surfer>
 
 </body>
 </html>

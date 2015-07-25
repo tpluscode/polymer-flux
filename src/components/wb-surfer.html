@@ -1,0 +1,37 @@
+<script src="HistoryStore.js"></script>
+<link rel="import" href="../lib/polymer/polymer.html"/>
+<link rel="import" href="main-content.html"/>
+<link rel="import" href="wb-side-content.html"/>
+<link rel="import" href="../lib/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="wb-surfer">
+    <style>
+        :host {
+            @apply(--layout-horizontal);
+        }
+
+        [menu] {
+            @apply(--layout-vertical);
+        }
+
+        [main] {
+            @apply(--layout-flex);
+            @apply(--layout-vertical);
+        }
+    </style>
+
+    <template>
+        <ld-history baseUri='http://test.wikibus.org/'></ld-history>
+
+        <wb-side-content menu></wb-side-content>
+
+        <wb-main-content main></wb-main-content>
+    </template>
+</dom-module>
+
+
+<script>
+    Polymer({
+        is: 'wb-surfer'
+    })
+</script>

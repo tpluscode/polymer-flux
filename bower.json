@@ -24,63 +24,8 @@
     "jquery": "~2.1.3",
     "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#~1.0.3",
-    "paper-dialog": "PolymerElements/paper-dialog#~1.0.1"
-  },
-  "overrides": {
-    "polymer": {
-      "main": [
-        "polymer-mini.html",
-        "polymer.html",
-        "polymer-micro.html"
-      ]
-    },
-    "bootstrap": {
-      "main": "dist/**/*.*"
-    },
-    "webcomponentsjs": {
-      "main": "webcomponents*.js"
-    },
-    "paper-dialog-behavior": {
-      "main": [
-        "paper-dialog-behavior.html",
-        "paper-dialog-common.css"
-      ]
-    },
-    "promise-polyfill":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "iron-meta":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "iron-flex-layout":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "paper-styles":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "neon-animation":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "iron-overlay-behavior":{
-      "main": [
-        "**/*"
-      ]
-    },
-    "web-animations-js":{
-      "main": [
-        "**/*"
-      ]
-    }
+    "paper-dialog": "PolymerElements/paper-dialog#~1.0.1",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.2"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.2",

@@ -1,0 +1,25 @@
+<link rel="import" href="modelStore.html" />
+<dom-module id="wb-side-content">
+    <template>
+        <wb-stores-model id="store" resource="{{model}}"></wb-stores-model>
+            Menu for:
+            <ul>
+                <template is="dom-repeat" items="{{modelTypes(model)}}">
+                    <li>{{item}}</li>
+                </template>
+            </ul>
+    </template>
+</dom-module>
+<script>
+    'use strict';
+
+    require(['underscore'], function(_){
+        Polymer({
+            is: 'wb-side-content',
+            modelTypes: function(m) {
+                return m['@type'];
+            }
+        });
+    });
+
+</script>

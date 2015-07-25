@@ -8,51 +8,30 @@
   <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
   <script src="/js/require.config.js"></script>
   <script src="/lib/requirejs/require.js"></script>
-  <script>
-    require(['/js/app.js']);
-  </script>
   <script src="/components/hydra-router.js"></script>
     <script src="/components/HistoryStore.js"></script>
   <link rel="import" href="/lib/polymer/polymer.html" />
-    <link href="/components/ld-resource.html" rel="import" />
-    <link rel="import" href="/components/actions.html" />
-    <link rel="import" href="/components/modelStore.html" />
+    <link rel="import" href="/components/main-content.html" />
+    <link rel="import" href="/components/wb-side-content.html" />
   <!-- Bootstrap -->
   <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body unresolved>
-  <wb-actions></wb-actions>
-  <wb-stores-model></wb-stores-model>
+
   <ld-history baseUri='http://test.wikibus.org/'></ld-history>
 
   <div horizontal layout>
-    <hydra-router flex two>
-      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'>
-        <template>
-          Collection menu here
-        </template>
-      </hydra-route>
-      <hydra-route type='http://wikibus.org/ontology#Book'>
-        <template>
-          Book menu here
-        </template>
-      </hydra-route>
-      <hydra-route type='http://wikibus.org/ontology#Source'>
-        <template>
-          Source menu here
-        </template>
-      </hydra-route>
-      <hydra-route><template></template></hydra-route>
-    </hydra-router>
 
-    <hydra-router flex twelve>
-      <hydra-route type='http://www.w3.org/ns/hydra/core#PagedCollection'
-                   element="ld-resource"
-                   attribute="resource">
-      </hydra-route>
-      <hydra-route id='no-type-matches-any' element="ld-resource" attribute="resource">
-      </hydra-route>
-    </hydra-router>
+      <div flex two>
+          <wb-side-content></wb-side-content>
+      </div>
+
+    <div flex twelve>
+
+        <wb-main-content></wb-main-content>
+
+    </div>
   </div>
+
 </body>
 </html>

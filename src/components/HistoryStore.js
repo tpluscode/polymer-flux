@@ -3,7 +3,7 @@
   require(['reflux'], function(Reflux) {
     'use strict';
 
-    var NavActions = document.querySelector('wb-actions');
+    var NavActions = document.createElement('wb-actions');
 
     var HistoryElement = Object.create(HTMLElement.prototype);
 
@@ -14,13 +14,9 @@
         this.setAttribute('basePath', '/');
       }
 
-        var self = this;
-        window.setTimeout(function(){
-            NavActions.navigateTo.listen(self.pushHistory.bind(self));
-            window.addEventListener('popstate', self.restoreHistory);
-            NavActions.navigateTo(getResourceUri(self));
-        }, 1000);
-
+      NavActions.navigateTo.listen(this.pushHistory.bind(this));
+      window.addEventListener('popstate', this.restoreHistory);
+      NavActions.navigateTo(getResourceUri(this));
     };
 
     HistoryElement.restoreHistory = function(ev) {

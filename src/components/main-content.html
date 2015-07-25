@@ -1,0 +1,17 @@
+<link rel="import" href="modelStore.html" />
+<link href="ld-resource.html" rel="import" />
+
+<dom-module id="wb-main-content">
+    <template>
+        <wb-stores-model resource="{{model}}"></wb-stores-model>
+        <ld-resource resource="{{model}}"></ld-resource>
+    </template>
+</dom-module>
+
+<script>
+    'use strict';
+    Polymer({
+        is: 'wb-main-content'
+    });
+</script>
+

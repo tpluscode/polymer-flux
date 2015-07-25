@@ -64,7 +64,6 @@
 
       function activateCustomElement(router, elementName, route, model, attributeName) {
           var customElement = document.createElement(elementName);
-          var model1 = createRouteModel(router, route, model);
           customElement[attributeName] = model;
           activateElement(router, customElement);
       }
@@ -116,22 +115,5 @@
       return this.getAttribute('type') === type;
     }
 
-    function trimLeft(str, charlist) {
-      if (charlist === undefined)
-        charlist = '\s';
-
-      return str.replace(new RegExp('^[' + charlist + ']+'), '');
-    }
-
-    function trimRight(str, charlist) {
-      if (charlist === undefined)
-        charlist = '\s';
-
-      return str.replace(new RegExp('[' + charlist + ']+$'), '');
-    }
-
-    function trim(str, charlist) {
-      return trimRight(trimLeft(str, charlist), charlist);
-    }
   });
 })(window, document);

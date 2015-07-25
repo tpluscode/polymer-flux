@@ -1,54 +1,55 @@
 <link rel="import" href="actions.html"/>
 <link rel="import" href="../lib/iron-ajax/iron-ajax.html"/>
 
-<dom-module id="wb-stores-model">
-    <template>
-        <iron-ajax id="loadModel"
-                   headers='{"Accept": "application/ld+json"}'
-                   contentType="text/plain"
-                   on-response="handleLoadSuccess"
-                   on-error="handleLoadError"></iron-ajax>
-        <wb-actions id="NavActions"></wb-actions>
-    </template>
-</dom-module>
-
 <script>
 
-    require(['reflux', 'jsonld', 'es6-promise'], function (Reflux, jsonld, promise) {
+    require(['reflux', 'jsonld', 'es6-promise'], function (Reflux, jsonld) {
         'use strict';
         var jsonldp = jsonld.promises;
 
-        var store;
+        var ajax = document.createElement('iron-ajax');
+        ajax.header = { Accept: 'application/ld+json' };
+        ajax.contentType = 'text/plain';
 
-        function createStore(element) {
-            if (store) {
-                return;
-            }
+        var NavActions = document.createElement('wb-actions');
 
-            store = Reflux.createStore({
+        var store = Reflux.createStore({
                 init: function () {
-                    this.listenTo(element.$.NavActions.navigateTo, this.loadResource);
+                    this.listenTo(NavActions.navigateTo, this.loadResource);
                 },
                 loadResource: function (uri) {
-                    element.$.loadModel.url = uri;
-                    element.$.loadModel.generateRequest();
+                    ajax.url = uri;
+                    ajax.generateRequest();
                 }
             });
+
+        var handleLoadSuccess = function (res) {
+            jsonldp.expand(res.currentTarget.lastResponse).then(function (expanded) {
+                NavActions.navigateTo.success(expanded[0]);
+            });
+        };
+
+        var handleLoadError = function (request) {
+            NavActions.navigateTo.failed(request.status);
         }
+
+        ajax.addEventListener('response', handleLoadSuccess);
+        ajax.addEventListener('error', handleLoadError);
 
         Polymer({
             is: 'wb-stores-model',
-            ready: function () {
-                createStore(this);
+            properties: {
+                resource: {
+                    type: Object,
+                    notify: true,
+                    readOnly: true
+                }
             },
-            handleLoadSuccess: function (res) {
-                var self = this;
-                jsonldp.expand(res.currentTarget.lastResponse).then(function (expanded) {
-                    self.$.NavActions.navigateTo.success(expanded[0]);
-                });
+            ready: function() {
+                NavActions.navigateTo.success.listen(this.setResource.bind(this));
             },
-            handleLoadError: function (request) {
-                this.$.NavActions.navigateTo.failed(request.status);
+            setResource: function(r) {
+                this._setResource(r);
             }
         });
     });

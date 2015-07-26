@@ -25,10 +25,7 @@
     "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#~1.0.3",
     "paper-dialog": "PolymerElements/paper-dialog#~1.0.1",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.2"
-  },
-  "resolutions": {
-    "webcomponentsjs": "^0.7.2",
-    "polymer": "^1.0.0"
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.2",
+    "uri.js": "~1.16.0"
   }
 }

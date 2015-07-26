@@ -1,0 +1,67 @@
+<dom-module id="predicate-label">
+    <template>
+        <iron-ajax url="{{predicate}}"
+                   header='{ Accept: "application/ld+json" }'
+                   content-type="text/plain"
+                   auto
+                   last-response="{{jsonLd}}"></iron-ajax>
+        <json-ld-api resource="{{jsonLd}}" result="{{flattened}}" operation="flatten"></json-ld-api>
+        <span>[[getPredicateText(flattened)]]</span>
+    </template>
+</dom-module>
+
+<script>
+    require(['underscore', 'URIjs/URI'], function(_, URI) {
+        Polymer({
+            is: 'predicate-label',
+            properties: {
+                predicate: String,
+                labelProperty: String
+            },
+            ready: function() {
+              this.labelProperty = 'http://www.w3.org/2000/01/rdf-schema#label';
+            },
+            getPredicateText: function(flattened) {
+                var resource = _.findWhere(flattened, { '@id': this.predicate });
+                if(resource && resource[this.labelProperty])
+                {
+                    return resource[this.labelProperty][0]['@value'];
+                }
+
+                var uri = URI(this.predicate);
+                var hashPart = uri.fragment();
+                return hashPart || uri.segment(-1);
+            }
+        });
+    });
+
+    require(['jsonld'], function(jsonld) {
+        var jsonldp = jsonld.promises;
+
+        Polymer({
+            is: 'json-ld-api',
+            properties: {
+                result: {
+                    notify: true,
+                    readOnly: true,
+                    type: Object
+                },
+                resource: {
+                    type: Object,
+                    observer: '_callJsonLdApi'
+                },
+                operation: String
+            },
+            _callJsonLdApi: function(res) {
+                var self = this;
+
+                switch(this.operation) {
+                    case 'flatten':
+                        jsonldp.flatten(res).then(function(result) {
+                            self._setResult(result);
+                        });
+                }
+            }
+        })
+    });
+</script>

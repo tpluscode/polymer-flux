@@ -6,6 +6,7 @@ var require = {
     reflux: '/lib/reflux/dist/reflux',
     underscore: '/lib/underscore/underscore',
     react: '/lib/react/react',
-    jquery: '/lib/jquery/dist/jquery'
+    jquery: '/lib/jquery/dist/jquery',
+    URIjs: '/lib/uri.js/src'
   }
 };

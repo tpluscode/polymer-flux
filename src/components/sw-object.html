@@ -1,10 +1,12 @@
+<link rel="import" href="predicate-label.html"/>
+
 <dom-module id="sw-object">
     <template>
         <wb-actions id="actions"></wb-actions>
         <ul>
-        <template is="dom-repeat" items="{{objects}}">
-            <li>
-                <span>{{arrayItem(item, 'pred')}}</span>:
+            <template is="dom-repeat" items="{{objects}}">
+                <li>
+                    <predicate-label predicate="{{arrayItem(item, 'pred')}}"></predicate-label>:
 
                     <template is="dom-repeat" items="{{arrayItem(item, 'val')}}">
                         <template is="dom-if" if="{{arrayItem(item, '@value')}}">{{arrayItem(item, '@value')}}</template>
@@ -16,10 +18,10 @@
                         </template>
                     </template>
 
-            </li>
-        </template>
+                </li>
+            </template>
 
-      </ul>
+        </ul>
     </template>
 </dom-module>
 
@@ -34,7 +36,7 @@
                 }
             },
             arrayItem: function(item, idx){
-              return item[idx];
+                return item[idx];
             },
             getValues: function(obj) {
                 return _.chain(obj)

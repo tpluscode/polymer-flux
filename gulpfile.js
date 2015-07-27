@@ -15,7 +15,7 @@ gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
-gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
+gulp.task('build', [ 'bower-files', 'html', 'css', 'js', 'connect', 'watch']);
 
 gulp.task('connect', function() {
   connect.server({
@@ -30,9 +30,14 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('src/**/*.html')
-      .pipe(gulp.dest('dist'));
-})
+    gulp.src('src/**/*.html')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('css', function() {
+    gulp.src('src/**/*.css')
+        .pipe(gulp.dest('dist'));
+});
 
 gulp.task('js', function() {
   gulp.src('src/**/*.js')
@@ -53,7 +58,8 @@ gulp.task('compress', function() {
 
 gulp.task('watch', function() {
   gulp.watch(['src/**/*.html'], ['html', 'reload']);
-  gulp.watch(['src/**/*.js'], ['js', 'reload']);
+    gulp.watch(['src/**/*.js'], ['js', 'reload']);
+    gulp.watch(['src/**/*.css'], ['css', 'reload']);
 });
 
 gulp.task('bower-files', function() {

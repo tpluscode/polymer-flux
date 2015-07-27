@@ -59,6 +59,8 @@
                     case 'flatten':
                         jsonldp.flatten(res).then(function(result) {
                             self._setResult(result);
+                        }, function(){
+                            self._setResult(null);
                         });
                 }
             }

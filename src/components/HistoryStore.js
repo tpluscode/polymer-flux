@@ -3,8 +3,6 @@
   require(['reflux'], function(Reflux) {
     'use strict';
 
-    var NavActions = document.createElement('wb-actions');
-
     var HistoryElement = Object.create(HTMLElement.prototype);
 
     HistoryElement.attachedCallback = function() {
@@ -14,12 +12,14 @@
         this.setAttribute('basePath', '/');
       }
 
+      var NavActions = document.createElement('wb-actions');
       NavActions.navigateTo.listen(this.pushHistory.bind(this));
       window.addEventListener('popstate', this.restoreHistory);
       NavActions.navigateTo(getResourceUri(this));
     };
 
     HistoryElement.restoreHistory = function(ev) {
+      var NavActions = document.createElement('wb-actions');
       NavActions.navigateTo(ev.state);
     };
 

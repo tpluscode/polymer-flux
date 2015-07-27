@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Linked data browser</title>
-  <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
-  <script src="/js/require.config.js"></script>
-  <script src="/lib/requirejs/require.js"></script>
-  <link rel="import" href="/components/wb-surfer.html" />
-  <!-- Bootstrap -->
-  <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Article search</title>
+    <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/js/require.config.js"></script>
+    <script src="/lib/requirejs/require.js"></script>
+    <link rel="import" href="/components/article-box.html"/>
+    <link rel="import" href="/components/article-details.html"/>
+    <!-- Bootstrap -->
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body unresolved>
 
-  <wb-surfer></wb-surfer>
+<template id="dom-bind" id="app">
+    <iron-pages attr-for-selected="data-route" selected="{{route}}">
+        <article-box></article-box>
+    </iron-pages>
+
+    <iron-pages attr-for-selected="data-route" selected="{{route}}">
+        <article-details id="{{params.id}}"></article-details>
+    </iron-pages>
+</template>
 
 </body>
 </html>

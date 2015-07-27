@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/polymer-flux.iml" filepath="$PROJECT_DIR$/.idea/polymer-flux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/polymer-vs-react.iml" filepath="$PROJECT_DIR$/.idea/polymer-vs-react.iml" />
     </modules>
   </component>
 </project>

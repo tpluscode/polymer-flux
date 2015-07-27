@@ -20,6 +20,7 @@
     "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#~1.0.3",
     "paper-dialog": "PolymerElements/paper-dialog#~1.0.1",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.2"
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.2",
+    "page": "visionmedia/page.js#~1.6.3"
   }
 }

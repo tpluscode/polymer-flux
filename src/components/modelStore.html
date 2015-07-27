@@ -11,10 +11,9 @@
         ajax.header = { Accept: 'application/ld+json' };
         ajax.contentType = 'text/plain';
 
-        var NavActions = document.createElement('wb-actions');
-
         var store = Reflux.createStore({
                 init: function () {
+                    var NavActions = document.createElement('wb-actions');
                     this.listenTo(NavActions.navigateTo, this.loadResource);
                 },
                 loadResource: function (uri) {
@@ -25,11 +24,13 @@
 
         var handleLoadSuccess = function (res) {
             jsonldp.expand(res.currentTarget.lastResponse).then(function (expanded) {
+                var NavActions = document.createElement('wb-actions');
                 NavActions.navigateTo.success(expanded[0]);
             });
         };
 
         var handleLoadError = function (request) {
+            var NavActions = document.createElement('wb-actions');
             NavActions.navigateTo.failed(request.status);
         }
 
@@ -46,6 +47,7 @@
                 }
             },
             ready: function() {
+                var NavActions = document.createElement('wb-actions');
                 NavActions.navigateTo.success.listen(this.setResource.bind(this));
             },
             setResource: function(r) {

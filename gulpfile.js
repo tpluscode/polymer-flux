@@ -20,6 +20,7 @@ gulp.task('build', [ 'bower-files', 'html', 'js', 'connect', 'watch']);
 gulp.task('connect', function() {
   connect.server({
     root: 'dist',
+    port: 10001,
     middleware: function(connect, opt) {
       return [
         historyApiFallback

@@ -1,5 +1,5 @@
 {
-  "name": "flux-experiment",
+  "name": "polymer-vs-reactjs",
   "dependencies": {
     "browserify": "^8.1.0",
     "connect-history-api-fallback": "0.0.5",

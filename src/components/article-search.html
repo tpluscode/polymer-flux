@@ -1,0 +1,50 @@
+<link rel="import" href="/lib/paper-button/paper-button.html" />
+<link rel="import" href="/lib/paper-input/paper-input.html" />
+<link rel="import" href="/lib/paper-styles/paper-styles.html" />
+<link rel="import" href="/lib/iron-flex-layout/iron-flex-layout.html" />
+
+<dom-module id="article-search">
+    <style>
+        :host {
+            padding: 0 0.75rem;
+        }
+
+        :host paper-material {
+            @apply(--layout-horizontal);
+        }
+
+        .search-input {
+            @apply(--layout-flex-6);
+        }
+
+        .search-button {
+            @apply(--layout-flex-1);
+        }
+
+        [spacer] {
+            @apply(--layout-flex-5);
+        }
+
+        paper-button {
+            background-color: var(--paper-blue-500);
+        }
+    </style>
+
+    <template>
+        <paper-material elevation="2">
+            <div class="search-input">
+                <paper-input id="search-input" ref="searchToken" label="Search ..."></paper-input>
+            </div>
+            <div class="search-button">
+                <paper-button raised>Search</paper-button>
+            </div>
+            <div spacer></div>
+        </paper-material>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'article-search'
+    });
+</script>

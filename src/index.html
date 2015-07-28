@@ -12,10 +12,12 @@
     <link rel="import" href="/components/article-details.html"/>
     <!-- Bootstrap -->
     <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body unresolved>
 
-<template id="dom-bind" id="app">
+<template is="dom-bind" id="app">
     <iron-pages attr-for-selected="data-route" selected="{{route}}">
         <article-box></article-box>
     </iron-pages>

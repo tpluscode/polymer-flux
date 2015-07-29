@@ -7,6 +7,7 @@ var require = {
         underscore: '/lib/underscore/underscore',
         react: '/lib/react/react',
         jquery: '/lib/jquery/dist/jquery',
-        URIjs: '/lib/uri.js/src'
+        URIjs: '/lib/uri.js/src',
+        page: '/lib/page/page'
     }
 };

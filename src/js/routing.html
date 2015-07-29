@@ -1,24 +1,25 @@
-<script src="/lib/page/page.js"></script>
-
 <script>
     window.addEventListener('WebComponentsReady', function() {
 
-        // We use Page.js for routing. This is a Micro
-        // client-side router inspired by the Express router
-        // More info: https://visionmedia.github.io/page.js/
-        page('/', function () {
-            app.route = 'article-boc';
+        require(['page'], function(page){
+            // We use Page.js for routing. This is a Micro
+            // client-side router inspired by the Express router
+            // More info: https://visionmedia.github.io/page.js/
+            page('/', function () {
+                app.route = 'article-box';
+            });
+
+            page('/article/:id', function (data) {
+                app.route = 'article';
+                app.params = data.params;
+            });
+
+            // add #! before urls
+            page({
+                hashbang: true
+            });
         });
 
-        page('/article/:id', function (data) {
-            app.route = 'article';
-            app.params = data.params;
-        });
-
-        // add #! before urls
-        page({
-            hashbang: true
-        });
 
     });
 </script>

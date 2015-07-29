@@ -5,19 +5,18 @@
 
 <dom-module id="article-box">
     <template>
-        <div>
-            <article-search></article-search>
-            <search-stats></search-stats>
-            <ul className="collection">
-                <template is="dom-repeat" items="{{articles}}">
-                    <article-row title="{{item.title}}" esid="{{item._id}}"></article-row>
-                </template>
-            </ul>
+        <article-search></article-search>
+        <search-stats></search-stats>
+        <ul className="collection">
+            <template is="dom-repeat" items="{{articles}}">
+                <article-row title="{{item.title}}" esid="{{item._id}}"></article-row>
+            </template>
+        </ul>
     </template>
 </dom-module>
 
 <script>
     Polymer({
-        is: 'article-box'
+        is: 'article-box',
     });
 </script>

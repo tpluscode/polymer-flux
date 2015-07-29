@@ -8,6 +8,7 @@
     <script src="/lib/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="/js/require.config.js"></script>
     <script src="/lib/requirejs/require.js"></script>
+    <link rel="import" href="/lib/iron-pages/iron-pages.html"/>
     <link rel="import" href="/components/article-box.html"/>
     <link rel="import" href="/components/article-details.html"/>
     <link rel="import" href="/js/routing.html"/>
@@ -24,7 +25,7 @@
             <article-box></article-box>
         </section>
         <section data-route="article">
-           xyz <article-details id="{{params.id}}"></article-details>
+           <article-details id="{{params.id}}"></article-details>
         </section>
     </iron-pages>
 </template>

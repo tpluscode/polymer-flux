@@ -1,2 +1,6 @@
 <article-box />
   - all those handlers on <Article /> violate SRP
+
+Polymer
+  - invalid HTML breaks IE
+  - remember about imports

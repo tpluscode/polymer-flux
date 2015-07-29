@@ -1,22 +1,35 @@
 <link rel="import" href="/lib/polymer/polymer.html"/>
 <link rel="import" href="article-search.html"/>
 <link rel="import" href="search-stats.html"/>
-<link rel="import" href="article-row.html"/>
+<link rel="import" href="article-results.html"/>
 
 <dom-module id="article-box">
     <template>
         <article-search></article-search>
         <search-stats></search-stats>
-        <ul className="collection">
-            <template is="dom-repeat" items="{{articles}}">
-                <article-row title="{{item.title}}" esid="{{item._id}}"></article-row>
-            </template>
-        </ul>
+        <article-results articles="[[articles]]" hidden="{{noArticles}}"></article-results>
     </template>
 </dom-module>
 
 <script>
     Polymer({
-        is: 'article-box'
+        is: 'article-box',
+        properties: {
+            noArticles: {
+                computed: 'hasNoArticles(articles)'
+            }
+        },
+        ready: function() {
+            this.articles = [{
+                title: 'y'
+            }];
+        },
+        hasNoArticles: function(articles) {
+            return !articles || articles.length === 0;
+        }
+    });
+
+    Polymer({
+        is: 'article-row'
     });
 </script>

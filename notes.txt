@@ -4,3 +4,5 @@
 Polymer
   - invalid HTML breaks IE
   - remember about imports
+  - computed gotcha (func requires param and value)
+  - nested css works (like SCSS)

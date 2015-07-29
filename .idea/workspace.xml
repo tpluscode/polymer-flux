@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/article-results.html" />
+      <change type="DELETED" beforePath="E:\Piskorz\Projekty\polymer-flux\src\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\Piskorz\Projekty\polymer-flux\src\css\normalize.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-box.html" afterPath="$PROJECT_DIR$/src/components/article-box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-search.html" afterPath="$PROJECT_DIR$/src/components/article-search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/require.config.js" afterPath="$PROJECT_DIR$/src/js/require.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/routing.html" afterPath="$PROJECT_DIR$/src/js/routing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes.txt" afterPath="$PROJECT_DIR$/notes.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-flux.iws" />
@@ -28,10 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.846293" vertical-offset="0" max-vertical-offset="702">
+            <state line="14" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="-7.5" vertical-offset="72" max-vertical-offset="648">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notes.txt" pinned="true" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="32" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
               <folding />
             </state>
           </provider>
@@ -40,16 +54,16 @@
       <file leaf-file-name="article-box.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="504">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/routing.html">
+      <file leaf-file-name="article-results.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="40" selection-start="380" selection-end="380" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="540">
+            <state line="52" column="45" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.2658228" vertical-offset="789" max-vertical-offset="1638">
               <folding />
             </state>
           </provider>
@@ -95,7 +109,11 @@
         <option value="$PROJECT_DIR$/src/css/main.css" />
         <option value="$PROJECT_DIR$/src/js/require.config.js" />
         <option value="$PROJECT_DIR$/src/js/routing.html" />
+        <option value="$PROJECT_DIR$/src/components/article-search.html" />
+        <option value="$PROJECT_DIR$/src/components/article-box.html" />
+        <option value="$PROJECT_DIR$/notes.txt" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/components/article-results.html" />
       </list>
     </option>
   </component>
@@ -200,20 +218,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -226,7 +230,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="TODO_SCOPE" value="Project Files" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../polymer-vs-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../polymer-starter" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -334,7 +338,23 @@
       <created>1437974670364</created>
       <updated>1437974670364</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="try to fix routing">
+      <created>1438150991384</created>
+      <updated>1438150991384</updated>
+    </task>
+    <task id="LOCAL-00015" summary="import was missin (sic!)">
+      <created>1438200087344</created>
+      <updated>1438200087344</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix invalid HTML (breaks IE :shit:)">
+      <created>1438200112036</created>
+      <updated>1438200112036</updated>
+    </task>
+    <task id="LOCAL-00017" summary="redundant comma">
+      <created>1438200163844</created>
+      <updated>1438200163844</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -361,6 +381,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34705228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -375,7 +396,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -406,7 +426,11 @@
     <MESSAGE value="handle failed promise" />
     <MESSAGE value="&lt;wb-actions&gt; not Polymer anymore" />
     <MESSAGE value="don't user &lt;wb-actions&gt; too early" />
-    <option name="LAST_COMMIT_MESSAGE" value="don't user &lt;wb-actions&gt; too early" />
+    <MESSAGE value="try to fix routing" />
+    <MESSAGE value="import was missin (sic!)" />
+    <MESSAGE value="fix invalid HTML (breaks IE :shit:)" />
+    <MESSAGE value="redundant comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="redundant comma" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -428,7 +452,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="65" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="720" />
+        <state line="27" column="65" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="720">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
@@ -445,7 +471,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="864" />
+        <state line="23" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="864">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
@@ -457,7 +485,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="864" />
+        <state line="23" column="23" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="864">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
@@ -469,7 +499,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188" />
+        <state line="20" column="23" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
@@ -484,16 +516,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="153" selection-end="153" vertical-scroll-proportion="0.19529837" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="65" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="720" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="35" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1368" />
@@ -506,23 +528,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+        <state line="29" column="3" selection-start="937" selection-end="937" vertical-scroll-proportion="-16.625" vertical-offset="123" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.5" vertical-offset="0" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="9" selection-start="392" selection-end="392" vertical-scroll-proportion="0.3254973" vertical-offset="0" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/routing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="380" selection-end="380" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="8" column="40" selection-start="380" selection-end="380" vertical-scroll-proportion="0.26039782" vertical-offset="0" max-vertical-offset="553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.846293" vertical-offset="0" max-vertical-offset="702">
+        <state line="14" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="-7.5" vertical-offset="72" max-vertical-offset="648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="45" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.2658228" vertical-offset="789" max-vertical-offset="1638">
           <folding />
         </state>
       </provider>

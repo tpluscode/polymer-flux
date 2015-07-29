@@ -1,0 +1,86 @@
+<link rel="import" href="/lib/paper-icon-button/paper-icon-button.html"/>
+
+<dom-module id="article-results">
+    <style>
+        :host {
+            display: block;
+            padding: 10px;
+        }
+
+        paper-material {
+            @apply(--layout-horizontal);
+            padding: 20px;
+        }
+
+        ul {
+            background-color: #fff;
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 2px;
+            list-style-type: none;
+            width: 100%;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 20px;
+            margin: 0px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        ul:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <template>
+        <paper-material elevation="2">
+            <ul>
+                <template is="dom-repeat" items="{{articles}}">
+                    <li>
+                        <article-row title="{{item.title}}" esid="{{item._id}}"></article-row>
+                    </li>
+                </template>
+            </ul>
+        </paper-material>
+    </template>
+</dom-module>
+
+<dom-module id="article-row">
+    <style>
+        :host {
+            @apply(--layout);
+            @apply(--paper-font-common-base);
+        }
+
+        span {
+            @apply(--layout-flex-auto);
+            line-height: 1.5rem;
+        }
+
+        [action] {
+            color: var(--google-blue-500);
+            padding: 0;
+        }
+
+        [action] /deep/ iron-icon {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+
+    <template>
+        <span>{{title}}</span>
+        <paper-icon-button icon="flip-to-front" action></paper-icon-button>
+        <paper-icon-button icon="delete" action></paper-icon-button>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'article-results',
+        properties: {
+            articles: Object
+        }
+    });
+</script>

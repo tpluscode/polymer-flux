@@ -1,0 +1,59 @@
+<link rel="import" href="/lib/iron-icons/iron-icons.html">
+
+<dom-module id="search-stats">
+    <style>
+        :host {
+            display: block;
+            padding: 10px;
+        }
+
+        paper-material {
+            @apply(--layout-horizontal);
+            padding: 20px;
+        }
+
+        [col] {
+            @apply(--layout-flex-1);
+            padding-right: 30px;
+        }
+
+        iron-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+
+    <template>
+        <paper-material elevation="2">
+            <div col>
+                <iron-icon icon="alarm"></iron-icon>
+                <span>10 ms</span>
+            </div>
+            <div col>
+                <span>time out:</span>
+                <iron-icon icon="report-problem"></iron-icon>
+                <iron-icon icon="done" hidden$="true"></iron-icon>
+            </div>
+            <div col>
+                <span>shards alive:</span>
+                <iron-icon icon="favorite"></iron-icon>
+                <span>20 / 50</span>
+            </div>
+            <div col>
+                <iron-icon icon="search"></iron-icon>
+                <span>1000</span>
+            </div>
+            <div col>
+                <iron-icon icon="face"></iron-icon>
+                <span>2</span>
+            </div>
+        </paper-material>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'search-stats'
+    });
+</script>

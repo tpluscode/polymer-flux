@@ -38,7 +38,7 @@
             <ul>
                 <template is="dom-repeat" items="{{articles}}">
                     <li>
-                        <article-row title="{{item.title}}" esid="{{item._id}}"></article-row>
+                        <article-row title="{{item._source.title}}" esid="{{item._source._id}}"></article-row>
                     </li>
                 </template>
             </ul>
@@ -80,7 +80,13 @@
     Polymer({
         is: 'article-results',
         properties: {
-            articles: Object
+          articles: {
+            type: Object,
+            observer: '_articlesChanged'
+          }
+        },
+        _articlesChanged: function(articles) {
+          console.log('will display ' + articles.length + ' articles');
         }
     });
 </script>

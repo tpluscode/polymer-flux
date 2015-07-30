@@ -33,6 +33,7 @@
     </style>
 
     <template>
+        <flux-actions id="actions"></flux-actions>
         <paper-material elevation="2">
             <div class="search-input">
                 <paper-input id="search-input" ref="searchToken" label="Search ..."></paper-input>
@@ -47,6 +48,9 @@
 
 <script>
     Polymer({
-        is: 'article-search'
+        is: 'article-search',
+        attached: function() {
+            this.$.actions.article.search();
+        }
     });
 </script>

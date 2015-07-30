@@ -1,0 +1,12 @@
+<script>
+        var actions = Reflux.createActions({
+            'search': { children: [ 'success', 'failed' ] }
+        });
+
+        var ActionsElement = Object.create(HTMLElement.prototype);
+        ActionsElement.article = actions;
+
+        document.registerElement('flux-actions', {
+            prototype: ActionsElement
+        });
+</script>

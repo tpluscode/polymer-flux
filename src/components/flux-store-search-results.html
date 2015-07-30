@@ -1,0 +1,51 @@
+<link rel="import" href="flux-actions.html" />
+<link rel="import" href="/lib/iron-ajax/iron-ajax.html"/>
+
+<script>
+    'use strict';
+
+    var server = {
+      index_url:"http://localhost:9200/alltop/article"
+    };
+
+    var ajax = document.createElement('iron-ajax');
+    ajax.contentType = 'text/plain';
+
+    var store = Reflux.createStore({
+      init: function () {
+          var articleActions = document.createElement('flux-actions').article;
+          this.listenTo(articleActions.search, this.loadArticles);
+      },
+      loadArticles: function (searchTerms) {
+        searchTerms = searchTerms || {};
+        searchTerms.size = searchTerms.size || 100;
+
+        ajax.url = server.index_url + "/_search";
+        ajax.params = { size: searchTerms.size, query: { match_all: {} } };
+        ajax.generateRequest();
+      }
+    });
+
+    ajax.addEventListener('response', function(response) {
+      var articleActions = document.createElement('flux-actions').article;
+      articleActions.search.success(response.srcElement.lastResponse);
+    });
+
+    Polymer({
+      is: 'flux-store-search-results',
+      properties: {
+        articles: {
+          type: Object,
+          notify: true,
+          readOnly: true
+        }
+      },
+      ready: function() {
+        var articleActions = document.createElement('flux-actions').article;
+        articleActions.search.success.listen(this.updateResults.bind(this));
+      },
+      updateResults: function(response) {
+        this._setArticles(response.hits.hits);
+      }
+    });
+</script>

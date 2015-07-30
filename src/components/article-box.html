@@ -2,28 +2,21 @@
 <link rel="import" href="article-search.html"/>
 <link rel="import" href="search-stats.html"/>
 <link rel="import" href="article-results.html"/>
+<link rel="import" href="flux-actions.html"/>
+<link rel="import" href="flux-store-search-results.html"/>
 
 <dom-module id="article-box">
     <template>
+        <flux-store-search-results articles="{{articles}}"></flux-store-search-results>
         <article-search></article-search>
         <search-stats></search-stats>
-        <article-results articles="[[articles]]" hidden="{{noArticles}}"></article-results>
+        <article-results articles="[[articles]]" hidden="{{hasNoArticles(articles)}}"></article-results>
     </template>
 </dom-module>
 
 <script>
     Polymer({
         is: 'article-box',
-        properties: {
-            noArticles: {
-                computed: 'hasNoArticles(articles)'
-            }
-        },
-        ready: function() {
-            this.articles = [{
-                title: 'y'
-            }];
-        },
         hasNoArticles: function(articles) {
             return !articles || articles.length === 0;
         }

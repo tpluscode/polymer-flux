@@ -6,3 +6,8 @@ Polymer
   - remember about imports
   - computed gotcha (func requires param and value)
   - nested css works (like SCSS)
+  - property doesn't have to be declared
+  - function doesn't have to be declared
+
+Reflux
+  - trigger not used, but rather attributes published

@@ -14,9 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.1",
     "reflux": "~0.2.3",
-    "requirejs": "~2.1.15",
     "paper-dialog-behavior": "PolymerElements/paper-dialog-behavior#^1.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#~1.0.3",
     "paper-dialog": "PolymerElements/paper-dialog#~1.0.1",

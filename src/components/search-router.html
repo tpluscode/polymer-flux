@@ -1,7 +1,17 @@
 <script src="/lib/page/page.js"></script>
 
+<dom-module id="search-router">
+    <template>
+        <flux-actions id="actions"></flux-actions>
+    </template>
+</dom-module>
+
 <script>
-    window.addEventListener('WebComponentsReady', function() {
+    Polymer({
+        is: 'search-router',
+        attached: function() {
+            var self = this;
+
             // We use Page.js for routing. This is a Micro
             // client-side router inspired by the Express router
             // More info: https://visionmedia.github.io/page.js/
@@ -11,12 +21,13 @@
 
             page('/article/:id', function (data) {
                 app.route = 'article';
-                app.params = data.params;
+                self.$.actions.article.show(data.params.id);
             });
 
             // add #! before urls
             page({
                 hashbang: false
             });
+        }
     });
 </script>

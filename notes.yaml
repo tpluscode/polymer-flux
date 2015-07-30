@@ -13,3 +13,7 @@ Polymer
 
 Reflux
   - trigger not used, but rather attributes published
+
+ToDo
+  - global loader notification element
+  - improve back link by remembering last search terms

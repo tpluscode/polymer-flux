@@ -11,9 +11,11 @@
     <link rel="import" href="/components/article-box.html"/>
     <link rel="import" href="/components/article-details.html"/>
     <link rel="import" href="/components/flux-store-article.html"/>
-    <link rel="import" href="/js/routing.html"/>
+    <link rel="import" href="/components/search-router.html"/>
 </head>
 <body unresolved>
+
+<search-router></search-router>
 
 <template is="dom-bind" id="app">
     <iron-pages attr-for-selected="data-route" selected="{{route}}">

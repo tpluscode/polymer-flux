@@ -1,27 +1,74 @@
 <dom-module id="article-details">
+    <style>
+        :host {
+            display: block;
+            padding: 10px;
+            @apply(--paper-font-common-base);
+        }
+
+        paper-material {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4.2rem;
+            line-height: 4.62rem;
+            margin: 2.1rem 0 1.68rem 0;
+        }
+
+        item-details {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #1E88E5;
+            text-decoration: none;
+        }
+    </style>
+
     <template>
-        <a on-click="{back}">Back</a>
-        <h1>{{title}}</h1>
-        <item-details value="{{_source.summary}}" name="Summary" ></item-details>
-        <item-details value="{{_source.link}}" link="true" name="Link"></item-details>
-        <item-details value="{{_source.md5}}"  name="Md5"></item-details>
-        <item-details value="{{_index}}" name="_index" ></item-details>
+        <paper-material elevation="2">
+            <a href="/">Back</a>
+            <h1>{{article._source.title}}</h1>
+            <item-details value="{{article._source.summary}}" name="Summary" ></item-details>
+            <item-details value="{{article._source.link}}" link="true" name="Link"></item-details>
+            <item-details value="{{article._source.md5}}"  name="Md5"></item-details>
+            <item-details value="{{article._index}}" name="_index" ></item-details>
+        </paper-material>
     </template>
 </dom-module>
 
-<dom-module id="items-details">
+<dom-module id="item-details">
+    <style>
+        :host {
+            @apply(--layout-horizontal);
+        }
+
+        .col2 {
+            @apply(--layout-flex-2);
+        }
+
+        .col10 {
+            @apply(--layout-flex-10);
+        }
+
+        a {
+            color: #1E88E5;
+            text-decoration: none;
+        }
+    </style>
+
     <template>
-            <div class="col2">
-                <span>{{name}}</span>
-            </div>
-            <div class="col10" >
-                <template is="dom-if" if="{{link}}">
-                    <a target="_blank" href="{{value}}">{{value}}</a>
-                </template>
-                <template is="dom-if" if="{{!link}}">
-                    <span>{{value}}</span>
-                </template>
-            </div>
+        <div class="col2">
+            <span>{{name}}</span>
+        </div>
+        <div class="col10">
+            <template is="dom-if" if="{{link}}">
+                <a target="_blank" href="{{value}}">{{value}}</a>
+            </template>
+            <template is="dom-if" if="{{!link}}">
+                <span>{{value}}</span>
+            </template>
         </div>
     </template>
 </dom-module>
@@ -35,6 +82,14 @@
     });
 
     Polymer({
-        is: 'item-details'
+        is: 'item-details',
+        properties: {
+            name: String,
+            link: {
+                type: Boolean,
+                value: false
+            },
+            value: Object
+        }
     });
 </script>

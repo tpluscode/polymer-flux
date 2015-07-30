@@ -72,7 +72,7 @@
     <template>
         <flux-actions id="actions"></flux-actions>
         <span>{{title}}</span>
-        <paper-icon-button icon="flip-to-front" action on-click="showArticle"></paper-icon-button>
+        <a href$="{{getArticleLink(esid)}}" on-click="showArticle"><iron-icon icon="flip-to-front" action on-click="showArticle"></iron-icon></a>
         <paper-icon-button icon="delete" action></paper-icon-button>
     </template>
 </dom-module>
@@ -94,7 +94,10 @@
     Polymer({
         is: 'article-row',
         showArticle: function() {
-            this.$.actions.article.show(this.esid);
+           // this.$.actions.article.show(this.esid);
+        },
+        getArticleLink: function(esid) {
+            return '/article/' + esid;
         }
     });
 </script>

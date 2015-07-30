@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/article-details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/flux-store-article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-box.html" afterPath="$PROJECT_DIR$/src/components/article-box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-details.html" afterPath="$PROJECT_DIR$/src/components/article-details.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-results.html" afterPath="$PROJECT_DIR$/src/components/article-results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/flux-actions.html" afterPath="$PROJECT_DIR$/src/components/flux-actions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/flux-store-search-results.html" afterPath="$PROJECT_DIR$/src/components/flux-store-search-results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/routing.html" afterPath="$PROJECT_DIR$/src/js/routing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes.yaml" afterPath="$PROJECT_DIR$/notes.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\Piskorz\Projekty\polymer-flux\src\js\routing.html" afterPath="$PROJECT_DIR$/src/components/search-router.html" />
     </list>
     <ignored path="polymer-flux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,16 +33,34 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="555" selection-end="618" vertical-scroll-proportion="-6.75" vertical-offset="54" max-vertical-offset="666">
+            <state line="25" column="50" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-15.875" vertical-offset="69" max-vertical-offset="702">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article-details.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="search-router.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.25" vertical-offset="0" max-vertical-offset="702">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article-details.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="53" selection-start="832" selection-end="832" vertical-scroll-proportion="-4.2916665" vertical-offset="257" max-vertical-offset="810">
+            <state line="57" column="9" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.9349005" vertical-offset="509" max-vertical-offset="1800">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notes.yaml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="54" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -63,7 +78,7 @@
       <file leaf-file-name="article-results.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="26" selection-start="2284" selection-end="2284" vertical-scroll-proportion="-17.041666" vertical-offset="1283" max-vertical-offset="1908">
+            <state line="96" column="13" selection-start="2379" selection-end="2379" vertical-scroll-proportion="-72.0" vertical-offset="0" max-vertical-offset="1962">
               <folding />
             </state>
           </provider>
@@ -78,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flux-store-article.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="flux-store-article.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="761" selection-end="761" vertical-scroll-proportion="0.5479204" vertical-offset="111" max-vertical-offset="1026">
+            <state line="32" column="17" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-9.306123" vertical-offset="120" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -137,14 +152,16 @@
         <option value="$PROJECT_DIR$/src/js/require.config.js" />
         <option value="$PROJECT_DIR$/src/components/article-search.html" />
         <option value="$PROJECT_DIR$/notes.txt" />
-        <option value="$PROJECT_DIR$/src/js/routing.html" />
         <option value="$PROJECT_DIR$/src/components/article-box.html" />
-        <option value="$PROJECT_DIR$/src/components/article-details.html" />
-        <option value="$PROJECT_DIR$/src/components/article-results.html" />
         <option value="$PROJECT_DIR$/src/components/flux-actions.html" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/components/flux-store-search-results.html" />
         <option value="$PROJECT_DIR$/src/components/flux-store-article.html" />
+        <option value="$PROJECT_DIR$/src/components/search-app.html" />
+        <option value="$PROJECT_DIR$/src/components/article-results.html" />
+        <option value="$PROJECT_DIR$/src/js/routing.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/notes.yaml" />
+        <option value="$PROJECT_DIR$/src/components/article-details.html" />
       </list>
     </option>
   </component>
@@ -227,7 +244,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,11 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,7 +408,11 @@
       <created>1438273635168</created>
       <updated>1438273635168</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="getting article on details click">
+      <created>1438276535771</created>
+      <updated>1438276535771</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -423,7 +440,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34705228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -472,7 +489,8 @@
     <MESSAGE value="fix invalid HTML (breaks IE :shit:)" />
     <MESSAGE value="redundant comma" />
     <MESSAGE value="implement article search result component&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement article search result component&#10;" />
+    <MESSAGE value="getting article on details click" />
+    <option name="LAST_COMMIT_MESSAGE" value="getting article on details click" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -600,23 +618,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/routing.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="633" selection-end="633" vertical-scroll-proportion="-13.5" vertical-offset="0" max-vertical-offset="504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="7" selection-start="818" selection-end="818" vertical-scroll-proportion="-16.5" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="53" selection-start="832" selection-end="832" vertical-scroll-proportion="-4.2916665" vertical-offset="257" max-vertical-offset="810">
           <folding />
         </state>
       </provider>
@@ -628,20 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="26" selection-start="2284" selection-end="2284" vertical-scroll-proportion="-17.041666" vertical-offset="1283" max-vertical-offset="1908">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="555" selection-end="618" vertical-scroll-proportion="-6.75" vertical-offset="54" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-store-search-results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="9" selection-start="2940" selection-end="2940" vertical-scroll-proportion="-17.791666" vertical-offset="1283" max-vertical-offset="1854">
@@ -649,9 +639,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="13" selection-start="2379" selection-end="2379" vertical-scroll-proportion="-72.0" vertical-offset="0" max-vertical-offset="1962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.25" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="761" selection-end="761" vertical-scroll-proportion="0.5479204" vertical-offset="111" max-vertical-offset="1026">
+        <state line="32" column="17" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-9.306123" vertical-offset="120" max-vertical-offset="1026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="50" selection-start="1036" selection-end="1036" vertical-scroll-proportion="-15.875" vertical-offset="69" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="54" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="9" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.9349005" vertical-offset="509" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>

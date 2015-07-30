@@ -38,6 +38,36 @@
           type: Object,
           notify: true,
           readOnly: true
+        },
+        timeTaken: {
+          type: Number,
+          notify: true,
+          readOnly: true
+        },
+        hasTimedOut: {
+          type: Boolean,
+          notify: true,
+          readOnly: true
+        },
+        successfulShards: {
+          type: Number,
+          notify: true,
+          readOnly: true
+        },
+        totalShards: {
+          type: Number,
+          notify: true,
+          readOnly: true
+        },
+        totalHits: {
+          type: Number,
+          notify: true,
+          readOnly: true
+        },
+        maxScore: {
+          type: Number,
+          notify: true,
+          readOnly: true
         }
       },
       ready: function() {
@@ -46,6 +76,12 @@
       },
       updateResults: function(response) {
         this._setArticles(response.hits.hits);
+        this._setTimeTaken(response.took);
+        this._setHasTimedOut(response.timed_out);
+        this._setSuccessfulShards(response._shards.successful);
+        this._setTotalShards(response._shards.successful + response._shards.failed);
+        this._setTotalHits(response.hits.total);
+        this._setMaxScore(response.hits.max_score);
       }
     });
 </script>

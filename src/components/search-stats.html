@@ -25,29 +25,35 @@
     </style>
 
     <template>
-        <flux-store-search-results articles="{{articles}}"></flux-store-search-results>
+        <flux-store-search-results
+              time-taken="{{timeTaken}}"
+              has-timed-out="{{hasTimedOut}}"
+              successful-shards="{{successfulShards}}"
+              total-shards="{{totalShards}}"
+              total-hits="{{totalHits}}"
+              max-score="{{maxScore}}"></flux-store-search-results>
         <paper-material elevation="2">
             <div col>
                 <iron-icon icon="alarm"></iron-icon>
-                <span>10 ms</span>
+                <span>{{timeTaken}}</span> ms
             </div>
             <div col>
                 <span>time out:</span>
-                <iron-icon icon="report-problem"></iron-icon>
-                <iron-icon icon="done" hidden$="true"></iron-icon>
+                <iron-icon icon="report-problem" hidden$="{{!hasTimedOut}}"></iron-icon>
+                <iron-icon icon="done" hidden$="{{hasTimedOut}}"></iron-icon>
             </div>
             <div col>
                 <span>shards alive:</span>
                 <iron-icon icon="favorite"></iron-icon>
-                <span>20 / 50</span>
+                <span>{{successfulShards}}</span> / <span>{{totalShards}}</span>
             </div>
             <div col>
                 <iron-icon icon="search"></iron-icon>
-                <span>1000</span>
+                <span>{{totalHits}}</span>
             </div>
             <div col>
                 <iron-icon icon="face"></iron-icon>
-                <span>2</span>
+                <span>{{maxScore}}</span>
             </div>
         </paper-material>
     </template>

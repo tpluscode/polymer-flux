@@ -39,7 +39,7 @@
                 <paper-input id="search-input" ref="searchToken" label="Search ..."></paper-input>
             </div>
             <div class="search-button">
-                <paper-button raised>Search</paper-button>
+                <paper-button raised on-click="search">Search</paper-button>
             </div>
             <div spacer></div>
         </paper-material>
@@ -51,6 +51,9 @@
         is: 'article-search',
         attached: function() {
             this.$.actions.article.search();
+        },
+        search: function() {
+          this.$.actions.article.search(this.$['search-input'].value);
         }
     });
 </script>

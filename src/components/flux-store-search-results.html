@@ -5,24 +5,32 @@
     'use strict';
 
     var server = {
-      index_url:"http://localhost:9200/alltop/article"
+      index_url:"http://localhost:9200"
     };
 
     var ajax = document.createElement('iron-ajax');
-    ajax.contentType = 'text/plain';
+    ajax.auto = true;
+    ajax.handleAs = 'json';
+    ajax.contentType = 'application/json';
+    ajax.method = 'POST';
 
     var store = Reflux.createStore({
       init: function () {
           var articleActions = document.createElement('flux-actions').article;
           this.listenTo(articleActions.search, this.loadArticles);
       },
-      loadArticles: function (searchTerms) {
-        searchTerms = searchTerms || {};
-        searchTerms.size = searchTerms.size || 100;
+      loadArticles: function (searchText) {
+        var query = { match_all: {} };
+        if(searchText){
+          query = {
+            query_string: {
+              query: searchText
+            }
+          };
+        }
 
         ajax.url = server.index_url + "/_search";
-        ajax.params = { size: searchTerms.size, query: { match_all: {} } };
-        ajax.generateRequest();
+        ajax.body = { size: 100, query: query };
       }
     });
 
@@ -79,7 +87,7 @@
         this._setTimeTaken(response.took);
         this._setHasTimedOut(response.timed_out);
         this._setSuccessfulShards(response._shards.successful);
-        this._setTotalShards(response._shards.successful + response._shards.failed);
+        this._setTotalShards(response._shards.total);
         this._setTotalHits(response.hits.total);
         this._setMaxScore(response.hits.max_score);
       }

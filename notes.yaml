@@ -8,6 +8,8 @@ Polymer
   - nested css works (like SCSS)
   - property doesn't have to be declared
   - function doesn't have to be declared
+  - readOnly adds a private setter by convention
+  - attribute vs property (dashes and camelCase respectively)
 
 Reflux
   - trigger not used, but rather attributes published

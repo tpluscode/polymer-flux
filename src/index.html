@@ -10,6 +10,7 @@
     <link rel="import" href="/lib/iron-pages/iron-pages.html"/>
     <link rel="import" href="/components/article-box.html"/>
     <link rel="import" href="/components/article-details.html"/>
+    <link rel="import" href="/components/flux-store-article.html"/>
     <link rel="import" href="/js/routing.html"/>
 </head>
 <body unresolved>
@@ -20,7 +21,8 @@
             <article-box></article-box>
         </section>
         <section data-route="article">
-           xyz <article-details id="{{params.id}}"></article-details>
+            <flux-store-article article="{{article}}"></flux-store-article>
+            <article-details article="{{article}}"></article-details>
         </section>
     </iron-pages>
 </template>

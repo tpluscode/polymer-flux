@@ -2,94 +2,96 @@
 <link rel="import" href="/lib/iron-ajax/iron-ajax.html"/>
 
 <script>
-    'use strict';
+    (function(){
+        'use strict';
 
-    var server = {
-      index_url:"http://localhost:9200"
-    };
+        var server = {
+          index_url:"http://localhost:9200"
+        };
 
-    var ajax = document.createElement('iron-ajax');
-    ajax.auto = true;
-    ajax.handleAs = 'json';
-    ajax.contentType = 'application/json';
-    ajax.method = 'POST';
+        var ajax = document.createElement('iron-ajax');
+        ajax.auto = true;
+        ajax.handleAs = 'json';
+        ajax.contentType = 'application/json';
+        ajax.method = 'POST';
 
-    var store = Reflux.createStore({
-      init: function () {
-          var articleActions = document.createElement('flux-actions').article;
-          this.listenTo(articleActions.search, this.loadArticles);
-      },
-      loadArticles: function (searchText) {
-        var query = { match_all: {} };
-        if(searchText){
-          query = {
-            query_string: {
-              query: searchText
+        var store = Reflux.createStore({
+          init: function () {
+              var articleActions = document.createElement('flux-actions').article;
+              this.listenTo(articleActions.search, this.loadArticles);
+          },
+          loadArticles: function (searchText) {
+            var query = { match_all: {} };
+            if(searchText){
+              query = {
+                query_string: {
+                  query: searchText
+                }
+              };
             }
-          };
-        }
 
-        ajax.url = server.index_url + "/_search";
-        ajax.body = { size: 100, query: query };
-      }
-    });
+            ajax.url = server.index_url + "/_search";
+            ajax.body = { size: 100, query: query };
+          }
+        });
 
-    ajax.addEventListener('response', function(response) {
-      var articleActions = document.createElement('flux-actions').article;
-      articleActions.search.success(response.srcElement.lastResponse);
-    });
+        ajax.addEventListener('response', function(response) {
+          var articleActions = document.createElement('flux-actions').article;
+          articleActions.search.success(response.srcElement.lastResponse);
+        });
 
-    Polymer({
-      is: 'flux-store-search-results',
-      properties: {
-        articles: {
-          type: Object,
-          notify: true,
-          readOnly: true
-        },
-        timeTaken: {
-          type: Number,
-          notify: true,
-          readOnly: true
-        },
-        hasTimedOut: {
-          type: Boolean,
-          notify: true,
-          readOnly: true
-        },
-        successfulShards: {
-          type: Number,
-          notify: true,
-          readOnly: true
-        },
-        totalShards: {
-          type: Number,
-          notify: true,
-          readOnly: true
-        },
-        totalHits: {
-          type: Number,
-          notify: true,
-          readOnly: true
-        },
-        maxScore: {
-          type: Number,
-          notify: true,
-          readOnly: true
-        }
-      },
-      ready: function() {
-        var articleActions = document.createElement('flux-actions').article;
-        articleActions.search.success.listen(this.updateResults.bind(this));
-      },
-      updateResults: function(response) {
-        this._setArticles(response.hits.hits);
-        this._setTimeTaken(response.took);
-        this._setHasTimedOut(response.timed_out);
-        this._setSuccessfulShards(response._shards.successful);
-        this._setTotalShards(response._shards.total);
-        this._setTotalHits(response.hits.total);
-        this._setMaxScore(response.hits.max_score);
-      }
-    });
+        Polymer({
+          is: 'flux-store-search-results',
+          properties: {
+            articles: {
+              type: Object,
+              notify: true,
+              readOnly: true
+            },
+            timeTaken: {
+              type: Number,
+              notify: true,
+              readOnly: true
+            },
+            hasTimedOut: {
+              type: Boolean,
+              notify: true,
+              readOnly: true
+            },
+            successfulShards: {
+              type: Number,
+              notify: true,
+              readOnly: true
+            },
+            totalShards: {
+              type: Number,
+              notify: true,
+              readOnly: true
+            },
+            totalHits: {
+              type: Number,
+              notify: true,
+              readOnly: true
+            },
+            maxScore: {
+              type: Number,
+              notify: true,
+              readOnly: true
+            }
+          },
+          ready: function() {
+            var articleActions = document.createElement('flux-actions').article;
+            articleActions.search.success.listen(this.updateResults.bind(this));
+          },
+          updateResults: function(response) {
+            this._setArticles(response.hits.hits);
+            this._setTimeTaken(response.took);
+            this._setHasTimedOut(response.timed_out);
+            this._setSuccessfulShards(response._shards.successful);
+            this._setTotalShards(response._shards.total);
+            this._setTotalHits(response.hits.total);
+            this._setMaxScore(response.hits.max_score);
+          }
+        });
+    })();
 </script>

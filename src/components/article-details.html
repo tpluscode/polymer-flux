@@ -1,0 +1,40 @@
+<dom-module id="article-details">
+    <template>
+        <a on-click="{back}">Back</a>
+        <h1>{{title}}</h1>
+        <item-details value="{{_source.summary}}" name="Summary" ></item-details>
+        <item-details value="{{_source.link}}" link="true" name="Link"></item-details>
+        <item-details value="{{_source.md5}}"  name="Md5"></item-details>
+        <item-details value="{{_index}}" name="_index" ></item-details>
+    </template>
+</dom-module>
+
+<dom-module id="items-details">
+    <template>
+            <div class="col2">
+                <span>{{name}}</span>
+            </div>
+            <div class="col10" >
+                <template is="dom-if" if="{{link}}">
+                    <a target="_blank" href="{{value}}">{{value}}</a>
+                </template>
+                <template is="dom-if" if="{{!link}}">
+                    <span>{{value}}</span>
+                </template>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'article-details',
+        properties: {
+            article: Object
+        }
+    });
+
+    Polymer({
+        is: 'item-details'
+    });
+</script>

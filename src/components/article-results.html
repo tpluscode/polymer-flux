@@ -38,7 +38,7 @@
             <ul>
                 <template is="dom-repeat" items="{{articles}}">
                     <li>
-                        <article-row title="{{item._source.title}}" esid="{{item._source._id}}"></article-row>
+                        <article-row title="{{item._source.title}}" esid="{{item._id}}"></article-row>
                     </li>
                 </template>
             </ul>
@@ -63,15 +63,16 @@
             padding: 0;
         }
 
-        [action] /deep/ iron-icon {
+        [action] /deep/ iron-icon, iron-icon {
             width: 30px;
             height: 30px;
         }
     </style>
 
     <template>
+        <flux-actions id="actions"></flux-actions>
         <span>{{title}}</span>
-        <paper-icon-button icon="flip-to-front" action></paper-icon-button>
+        <paper-icon-button icon="flip-to-front" action on-click="showArticle"></paper-icon-button>
         <paper-icon-button icon="delete" action></paper-icon-button>
     </template>
 </dom-module>
@@ -87,6 +88,13 @@
         },
         _articlesChanged: function(articles) {
           console.log('will display ' + articles.length + ' articles');
+        }
+    });
+
+    Polymer({
+        is: 'article-row',
+        showArticle: function() {
+            this.$.actions.article.show(this.esid);
         }
     });
 </script>

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-details.html" afterPath="$PROJECT_DIR$/src/components/article-details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-results.html" afterPath="$PROJECT_DIR$/src/components/article-results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes.yaml" afterPath="$PROJECT_DIR$/notes.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Piskorz\Projekty\polymer-flux\src\js\routing.html" afterPath="$PROJECT_DIR$/src/components/search-router.html" />
     </list>
     <ignored path="polymer-flux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +46,7 @@
       <file leaf-file-name="article-details.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="9" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.9349005" vertical-offset="509" max-vertical-offset="1800">
+            <state line="46" column="15" selection-start="1212" selection-end="1212" vertical-scroll-proportion="1.4972875" vertical-offset="0" max-vertical-offset="1800">
               <folding />
             </state>
           </provider>
@@ -412,7 +407,11 @@
       <created>1438276535771</created>
       <updated>1438276535771</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="showing article details">
+      <created>1438290371567</created>
+      <updated>1438290371567</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -490,7 +489,8 @@
     <MESSAGE value="redundant comma" />
     <MESSAGE value="implement article search result component&#10;" />
     <MESSAGE value="getting article on details click" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting article on details click" />
+    <MESSAGE value="showing article details" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing article details" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -676,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="9" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.9349005" vertical-offset="509" max-vertical-offset="1800">
+        <state line="46" column="15" selection-start="1212" selection-end="1212" vertical-scroll-proportion="1.4972875" vertical-offset="0" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>

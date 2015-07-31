@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/styles.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dependencies.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-box.html" afterPath="$PROJECT_DIR$/src/components/article-box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-details.html" afterPath="$PROJECT_DIR$/src/components/article-details.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-results.html" afterPath="$PROJECT_DIR$/src/components/article-results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-search.html" afterPath="$PROJECT_DIR$/src/components/article-search.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
@@ -30,76 +31,7 @@
     <favorites_list name="polymer-flux" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="43" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.75" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search-stats.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-4.5" vertical-offset="0" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-36.75" vertical-offset="0" max-vertical-offset="1800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-results.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="43" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-16.5" vertical-offset="378" max-vertical-offset="990">
-              <folding>
-                <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
-                <element signature="tag#script#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-search.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="298" selection-end="298" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="378">
-              <folding>
-                <element signature="tag#dom-module#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-box.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.29294756" vertical-offset="0" max-vertical-offset="684">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="130" selection-end="130" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -144,15 +76,16 @@
         <option value="$PROJECT_DIR$/src/components/flux-store-article.html" />
         <option value="$PROJECT_DIR$/src/components/search-app.html" />
         <option value="$PROJECT_DIR$/src/js/routing.html" />
-        <option value="$PROJECT_DIR$/src/components/article-details.html" />
         <option value="$PROJECT_DIR$/notes.yaml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/article-search.html" />
-        <option value="$PROJECT_DIR$/src/components/article-results.html" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/styles.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/components/search-stats.html" />
+        <option value="$PROJECT_DIR$/src/components/article-details.html" />
+        <option value="$PROJECT_DIR$/src/components/article-results.html" />
+        <option value="$PROJECT_DIR$/src/components/article-search.html" />
         <option value="$PROJECT_DIR$/src/components/article-box.html" />
+        <option value="$PROJECT_DIR$/src/dependencies.html" />
       </list>
     </option>
   </component>
@@ -404,7 +337,11 @@
       <created>1438363219101</created>
       <updated>1438363219101</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="some styling">
+      <created>1438364304572</created>
+      <updated>1438364304572</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -486,7 +423,8 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="improve search input (behavior and layout)" />
     <MESSAGE value="link used" />
-    <option name="LAST_COMMIT_MESSAGE" value="link used" />
+    <MESSAGE value="some styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="some styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -502,7 +440,9 @@
     <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="11" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1800">
-          <folding />
+          <folding>
+            <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -683,20 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="-0.0" vertical-offset="126" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/flux-actions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.09764919" vertical-offset="0" max-vertical-offset="553">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
@@ -711,25 +637,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
+    <entry file="file://$PROJECT_DIR$/src/styles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="298" selection-end="298" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="378">
-          <folding>
-            <element signature="tag#dom-module#0" expanded="false" />
-          </folding>
+        <state line="8" column="23" selection-start="130" selection-end="130" vertical-scroll-proportion="0.26039782" vertical-offset="0" max-vertical-offset="553">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
+    <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-36.75" vertical-offset="0" max-vertical-offset="1800">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/flux-actions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.09764919" vertical-offset="0" max-vertical-offset="553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="41" selection-start="135" selection-end="135" vertical-scroll-proportion="0.065099455" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="43" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-16.5" vertical-offset="378" max-vertical-offset="990">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
           <folding>
             <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
             <element signature="tag#script#0" expanded="false" />
@@ -737,30 +682,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dependencies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="50" selection-start="469" selection-end="469" vertical-scroll-proportion="0.26039782" vertical-offset="0" max-vertical-offset="553">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="44" selection-end="44" vertical-scroll-proportion="0.032549728" vertical-offset="0" max-vertical-offset="1350">
+          <folding>
+            <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.75" vertical-offset="0" max-vertical-offset="720">
+        <state line="8" column="34" selection-start="313" selection-end="313" vertical-scroll-proportion="0.26039782" vertical-offset="0" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.html">
+    <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="130" selection-end="130" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-4.5" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.29294756" vertical-offset="0" max-vertical-offset="684">
+        <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="-0.0" vertical-offset="126" max-vertical-offset="720">
           <folding />
         </state>
       </provider>

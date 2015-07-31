@@ -16,14 +16,10 @@
         }
 
         .search-input {
-            @apply(--layout-flex-6);
+            @apply(--layout-flex-5);
         }
 
         .search-button {
-            @apply(--layout-flex-1);
-        }
-
-        [spacer] {
             @apply(--layout-flex-5);
         }
 
@@ -36,12 +32,13 @@
         <flux-actions id="actions"></flux-actions>
         <paper-material elevation="2">
             <div class="search-input">
-                <paper-input id="search-input" ref="searchToken" label="Search ..."></paper-input>
+                <paper-input id="search-input" ref="searchToken" label="Search ..."
+                             prevent-invalid-input="true" allowed-pattern="[a-z]"
+                             on-change="search"></paper-input>
             </div>
             <div class="search-button">
                 <paper-button raised on-click="search">Search</paper-button>
             </div>
-            <div spacer></div>
         </paper-material>
     </template>
 </dom-module>

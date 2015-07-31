@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
     gulpIgnore = require('gulp-ignore'),
-    vulcanize = require('gulp-vulcanize');
+    vulcanize = require('gulp-vulcanize'),
+    htmlmin = require('gulp-minify-html'),
+    minifyInline = require('gulp-minify-inline-scripts');
 
 require('web-component-tester').gulp.init(gulp);
 //historyApiFallback.setLogger(console.log.bind(console));
@@ -20,22 +22,27 @@ gulp.task('prod', ['clean'], function() {
     gulp.start('build-prod');
 });
 
-gulp.task('build', [ 'bower-files', 'html', 'css', 'js', 'connect', 'watch']);
+gulp.task('build', [ 'bower-files', 'html', 'connect', 'watch']);
 
-gulp.task('build-prod', [ 'vulcanize' ]);
+gulp.task('build-prod', [ 'index', 'vulcanize' ]);
 
 gulp.task('vulcanize', function() {
     gulp.src('src/dependencies.html')
         .pipe(vulcanize({
             inlineScripts: true
         }))
+        .pipe(htmlmin())
+        .pipe(minifyInline())
         .pipe(gulp.dest('dist'));
 
     gulp.src([
             'src/components/article-box.html',
-            'src/components/article-details.html'
+            'src/components/article-details.html',
+            'src/components/search-router.html'
         ], { base: 'src' })
         .pipe(vulcanize())
+        .pipe(htmlmin())
+        .pipe(minifyInline())
         .pipe(gulp.dest('dist'));
 });
 
@@ -56,26 +63,11 @@ gulp.task('html', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('css', function() {
-    gulp.src('src/**/*.css')
+gulp.task('index', function() {
+    gulp.src([ 'src/index.html', 'src/styles.html' ])
+        .pipe(htmlmin())
+        .pipe(minifyInline())
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('js', function() {
-  gulp.src('src/**/*.js')
-      .pipe(jshint())
-      .pipe(jshint.reporter('jshint-stylish'))
-      .pipe(gulp.dest('dist'));
-});
-
-gulp.task('compress', function() {
-  gulp.src('dist/**/*.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('dist'));
-
-  gulp.src('dist/**/*.css')
-      .pipe(minifyCSS())
-      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {

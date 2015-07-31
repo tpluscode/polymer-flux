@@ -17,6 +17,7 @@
             // More info: https://visionmedia.github.io/page.js/
             page('/', function () {
                 app.route = 'article-box';
+                self.$.actions.article.search();
             });
 
             page('/article/:id', function (data) {

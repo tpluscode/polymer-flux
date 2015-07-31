@@ -49,9 +49,6 @@
 <script>
     Polymer({
         is: 'article-search',
-        attached: function() {
-            this.$.actions.article.search();
-        },
         search: function() {
           this.$.actions.article.search(this.$['search-input'].value);
         }

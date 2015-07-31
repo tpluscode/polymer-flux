@@ -4,12 +4,11 @@
     <style>
         :host {
             display: block;
-            padding: 10px;
         }
 
         paper-material {
             @apply(--layout-horizontal);
-            padding: 20px;
+            @apply(--paper-material);
         }
 
         ul {
@@ -64,15 +63,14 @@
         }
 
         [action] /deep/ iron-icon, iron-icon {
-            width: 30px;
-            height: 30px;
+            @apply(--default-icon);
         }
     </style>
 
     <template>
         <flux-actions id="actions"></flux-actions>
         <span>{{title}}</span>
-        <a href$="{{getArticleLink(esid)}}" on-click="showArticle"><iron-icon icon="flip-to-front" action on-click="showArticle"></iron-icon></a>
+        <a href$="{{getArticleLink(esid)}}"><iron-icon icon="flip-to-front" action on-click="showArticle"></iron-icon></a>
         <paper-icon-button icon="delete" action></paper-icon-button>
     </template>
 </dom-module>

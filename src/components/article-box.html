@@ -6,6 +6,14 @@
 <link rel="import" href="flux-store-search-results.html"/>
 
 <dom-module id="article-box">
+    <style>
+
+        article-search, search-stats, article-results {
+            padding: 10px;
+        }
+
+    </style>
+
     <template>
         <flux-store-search-results articles="{{articles}}"></flux-store-search-results>
         <article-search></article-search>

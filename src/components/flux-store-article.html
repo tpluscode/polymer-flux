@@ -27,7 +27,7 @@
 
         ajax.addEventListener('response', function(response) {
           var articleActions = document.createElement('flux-actions').article;
-          articleActions.show.success(response.srcElement.lastResponse);
+          articleActions.show.success(ajax.lastResponse);
         });
 
         Polymer({

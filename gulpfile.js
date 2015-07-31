@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     historyApiFallback = require('connect-history-api-fallback'),
     uglify = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
-    gulpIgnore = require('gulp-ignore');
+    gulpIgnore = require('gulp-ignore'),
+    vulcanize = require('gulp-vulcanize');
 
 require('web-component-tester').gulp.init(gulp);
 //historyApiFallback.setLogger(console.log.bind(console));
@@ -15,7 +16,28 @@ gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
+gulp.task('prod', ['clean'], function() {
+    gulp.start('build-prod');
+});
+
 gulp.task('build', [ 'bower-files', 'html', 'css', 'js', 'connect', 'watch']);
+
+gulp.task('build-prod', [ 'vulcanize' ]);
+
+gulp.task('vulcanize', function() {
+    gulp.src('src/dependencies.html')
+        .pipe(vulcanize({
+            inlineScripts: true
+        }))
+        .pipe(gulp.dest('dist'));
+
+    gulp.src([
+            'src/components/article-box.html',
+            'src/components/article-details.html'
+        ], { base: 'src' })
+        .pipe(vulcanize())
+        .pipe(gulp.dest('dist'));
+});
 
 gulp.task('connect', function() {
   connect.server({
@@ -65,7 +87,7 @@ gulp.task('watch', function() {
 gulp.task('bower-files', function() {
   gulp.src('bower_components/**/*.*', { base: 'bower_components' })
       .pipe(gulpIgnore.exclude("*.map"))
-      .pipe(gulp.dest('dist/lib'));
+      .pipe(gulp.dest('dist/bower_components'));
 });
 
 gulp.task('clean', function(cb) {

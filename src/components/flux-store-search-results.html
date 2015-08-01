@@ -7,7 +7,7 @@
         };
 
         var ajax = document.createElement('iron-ajax');
-        ajax.auto = true;
+        ajax.auto = false;
         ajax.handleAs = 'json';
         ajax.contentType = 'application/json';
         ajax.method = 'POST';
@@ -29,6 +29,7 @@
 
             ajax.url = server.index_url + "/_search";
             ajax.body = { size: 100, query: query };
+            ajax.generateRequest();
           }
         });
 

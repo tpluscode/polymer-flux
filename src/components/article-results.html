@@ -46,12 +46,11 @@
 <dom-module id="article-row">
     <style>
         :host {
-            @apply(--layout);
+            @apply(--layout-horizontal);
             @apply(--paper-font-common-base);
         }
 
         span {
-            @apply(--layout-flex-auto);
             line-height: 1.5rem;
         }
 
@@ -67,7 +66,7 @@
 
     <template>
         <flux-actions id="actions"></flux-actions>
-        <span>{{title}}</span>
+        <span class="layout flex">{{title}}</span>
         <a href$="{{getArticleLink(esid)}}"><iron-icon icon="flip-to-front" action on-click="showArticle"></iron-icon></a>
         <paper-icon-button icon="delete" action></paper-icon-button>
     </template>

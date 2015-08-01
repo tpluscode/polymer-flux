@@ -40,8 +40,14 @@
 <script>
     Polymer({
         is: 'article-search',
+        ready: function() {
+            var self = this;
+            this.$.actions.article.search.listen(function(newTerms) {
+                self.$['search-input'].value = newTerms;
+            });
+        },
         search: function() {
-          this.$.actions.article.search(this.$['search-input'].value);
+            page('/search-' + this.$['search-input'].value);
         }
     });
 </script>

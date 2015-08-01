@@ -24,7 +24,7 @@ gulp.task('prod', ['clean'], function() {
 
 gulp.task('build', [ 'bower-files', 'html', 'connect', 'watch']);
 
-gulp.task('build-prod', [ 'index', 'vulcanize' ]);
+gulp.task('build-prod', [ 'bower-files', 'index', 'vulcanize' ]);
 
 gulp.task('vulcanize', function() {
     gulp.src('src/dependencies.html')

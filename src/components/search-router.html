@@ -18,6 +18,11 @@
                 self.$.actions.article.search();
             });
 
+            page('/search-:terms', function (data) {
+                app.route = 'article-box';
+                self.$.actions.article.search(data.params.terms);
+            });
+
             page('/article/:id', function (data) {
                 app.route = 'article';
                 self.$.actions.article.show(data.params.id);

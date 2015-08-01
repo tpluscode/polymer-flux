@@ -11,8 +11,9 @@ Polymer:
   - readOnly adds a private setter by convention
   - attribute vs property (dashes and camelCase respectively)
 
-Reflux:
-  - trigger not used, but rather attributes published
+(Re)flux:
+  - store triggers not used, but rather attributes published
+  - example - a component invokes an actions and waits for store change. this way it is possible to add some 'middleware'
 
 ToDo na prezentację:
   - global loader notification element

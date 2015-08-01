@@ -23,7 +23,7 @@
                 self.$.actions.article.search(data.params.terms);
             });
 
-            page('/article/:id', function (data) {
+            page('/article-:id', function (data) {
                 app.route = 'article';
                 self.$.actions.article.show(data.params.id);
             });

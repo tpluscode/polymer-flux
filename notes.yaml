@@ -10,6 +10,7 @@ Polymer:
   - function doesn't have to be declared
   - readOnly adds a private setter by convention
   - attribute vs property (dashes and camelCase respectively)
+  - style custom properties can be overwritten
 
 (Re)flux:
   - store triggers not used, but rather attributes published

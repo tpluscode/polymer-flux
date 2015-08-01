@@ -67,7 +67,9 @@
     <template>
         <flux-actions id="actions"></flux-actions>
         <span class="layout flex">{{title}}</span>
-        <a href$="{{getArticleLink(esid)}}"><iron-icon icon="flip-to-front" action on-click="showArticle"></iron-icon></a>
+        <a href$="{{getArticleLink(esid)}}">
+            <iron-icon icon="flip-to-front" action></iron-icon>
+        </a>
         <paper-icon-button icon="delete" action></paper-icon-button>
     </template>
 </dom-module>

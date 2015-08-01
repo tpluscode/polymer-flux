@@ -13,7 +13,9 @@ Polymer:
 
 (Re)flux:
   - store triggers not used, but rather attributes published
+    - maybe stores could even be replaced with pure elements ?
   - example - a component invokes an actions and waits for store change. this way it is possible to add some 'middleware'
+  - maybe expose actions as events?
 
 ToDo na prezentację:
   - global loader notification element

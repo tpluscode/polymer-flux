@@ -1,48 +1,41 @@
+<dom-module id="flux-store-article">
+    <template>
+        <flux-actions id="actions"></flux-actions>
+        <iron-ajax id="ajax" handle-as="json" content-type="application/json"
+                   method="GET" last-response="{{article}}"
+                   url="{{getArticleUrl(articleId)}}" auto></iron-ajax>
+    </template>
+</dom-module>
+
 <script>
-    (function(){
-        'use strict';
+    'use strict';
 
-        var server = {
-          index_url:"http://localhost:9200/alltop/article/"
-        };
+    var server = {
+        index_url: "http://localhost:9200/alltop/article/"
+    };
 
-        var ajax = document.createElement('iron-ajax');
-        ajax.auto = true;
-        ajax.handleAs = 'json';
-        ajax.contentType = 'application/json';
-        ajax.method = 'GET';
-
-        var store = Reflux.createStore({
-          init: function () {
-              var articleActions = document.createElement('flux-actions').article;
-              this.listenTo(articleActions.show, this.loadArticle);
-          },
-          loadArticle: function (articleId) {
-            ajax.url = server.index_url + articleId;
-          }
-        });
-
-        ajax.addEventListener('response', function(response) {
-          var articleActions = document.createElement('flux-actions').article;
-          articleActions.show.success(ajax.lastResponse);
-        });
-
-        Polymer({
-          is: 'flux-store-article',
-          properties: {
+    Polymer({
+        is: 'flux-store-article',
+        properties: {
             article: {
-              type: Object,
-              notify: true,
-              readOnly: true
-            }
-          },
-          ready: function() {
-            var articleActions = document.createElement('flux-actions').article;
-            articleActions.show.success.listen(this.updateResults.bind(this));
-          },
-          updateResults: function(response) {
-            this._setArticle(response);
-          }
-        });
-    })();
+                type: Object,
+                notify: true,
+                observer: 'handleResponse'
+            },
+            articleId: String
+        },
+        ready: function() {
+            var self = this;
+
+            this.$.actions.article.show.listen(function(articleId) {
+                self.articleId = articleId;
+            });
+        },
+        handleResponse: function () {
+            this.$.actions.article.show.success(this.article);
+        },
+        getArticleUrl: function(articleId) {
+            return server.index_url + articleId;
+        }
+    });
 </script>

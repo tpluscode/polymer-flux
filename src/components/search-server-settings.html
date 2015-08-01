@@ -1,0 +1,18 @@
+<script>
+    var server = {
+        index_url: "http://localhost:9200/alltop/article/"
+    };
+
+    Polymer({
+        is: 'search-server-settings',
+        properties: {
+            url: {
+                type: String,
+                readOnly: true
+            }
+        },
+        ready: function() {
+            this._setUrl(server.index_url);
+        }
+    });
+</script>

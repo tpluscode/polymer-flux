@@ -2,9 +2,7 @@
     (function(){
         'use strict';
 
-        var server = {
-          index_url:"http://localhost:9200"
-        };
+        var server = document.createElement('search-server-settings');
 
         var ajax = document.createElement('iron-ajax');
         ajax.auto = false;
@@ -27,7 +25,7 @@
               };
             }
 
-            ajax.url = server.index_url + "/_search";
+            ajax.url = server.url + "/_search";
             ajax.body = { size: 100, query: query };
             ajax.generateRequest();
           }

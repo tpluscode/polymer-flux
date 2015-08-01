@@ -1,5 +1,6 @@
 <dom-module id="flux-store-article">
     <template>
+        <search-server-settings id="server"></search-server-settings>
         <flux-actions id="actions"></flux-actions>
         <iron-ajax id="ajax" handle-as="json" content-type="application/json"
                    method="GET" last-response="{{article}}"
@@ -9,10 +10,6 @@
 
 <script>
     'use strict';
-
-    var server = {
-        index_url: "http://localhost:9200/alltop/article/"
-    };
 
     Polymer({
         is: 'flux-store-article',
@@ -35,7 +32,7 @@
             this.$.actions.article.show.success(this.article);
         },
         getArticleUrl: function(articleId) {
-            return server.index_url + articleId;
+            return this.$.server.url + articleId;
         }
     });
 </script>

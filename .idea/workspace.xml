@@ -1,11 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="change">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/article-results.html" afterPath="$PROJECT_DIR$/src/components/article-results.html" />
+    <list default="true" id="f8723694-ee89-4570-abf1-c20efca5ecb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nm.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nm.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nm.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.fdt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.fdx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.fnm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.nvd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.nvm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_Lucene410_0.dvd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_Lucene410_0.dvm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_es090_0.blm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_es090_0.doc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_es090_0.pos" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_es090_0.tim" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nn_es090_0.tip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_no.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_no.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_no.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_np.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_np.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_np.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nq.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nq.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/_nq.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.fdt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.fdx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.fnm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.nvd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.nvm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_Lucene410_0.dvd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_Lucene410_0.dvm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_es090_0.blm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_es090_0.doc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_es090_0.pos" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_es090_0.tim" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/_o2_es090_0.tip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/antlr-runtime-3.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/asm-4.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/asm-commons-4.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/elasticsearch-1.4.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch-service-mgr.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch-service-x64.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch-service-x86.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/_state/global-268" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/groovy-all-2.3.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/jna-4.1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/jts-1.13.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-amd64-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-amd64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-amd64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-ia64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-sparc-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-sparc64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-universal-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-universal64-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-x86-freebsd-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-x86-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-x86-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/libsigar-x86-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/log4j-1.2.17.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-analyzers-common-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-core-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-expressions-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-grouping-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-highlighter-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-join-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-memory-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-misc-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-queries-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-queryparser-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-sandbox-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-spatial-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/lucene-suggest-4.10.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/node.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/1/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/1/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/3/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/segments_12z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/segments_13a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/index/segments_5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/index/segments_5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/1/index/segments_h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/1/index/segments_h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/3/index/segments_h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/sigar-1.6.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/sigar-amd64-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/sigar/sigar-x86-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/lib/spatial4j-0.4.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/tools2/_state/state-15" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/files_index/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/ict/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_da/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_de/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_en/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_es/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_fi/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_fr/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_nl/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname_no/_state/state-1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/_state/state-2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/myindexname/_state/state-2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/_state/state-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/tools2_en/_state/state-3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/tools2_no/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/_state/state-6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/3/translog/translog-1410356061708" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/1/translog/translog-1410356061717" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/1/translog/translog-1411049647140" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/translog/translog-1421958816726" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/translog/translog-1421958816735" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/translog/translog-1432289181162" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/translog/translog-1432289181212" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/1/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/1/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/3/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/index/write.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/NOTICE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/README.textile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch.in.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch.in.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/config/elasticsearch.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/elasticsearch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/config/logging.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/plugin.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/plugin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/bin/service.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats-a/1/_state/state-327" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/3/_state/state-329" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/cms-stats/1/_state/state-349" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/_state/state-41" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/_state/state-43" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/4/_state/state-5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/my-application/1/_state/state-7" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/_state/state-89" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/0/_state/state-8" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/_state/state-8" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-1.4.2/data/elasticsearch/nodes/0/indices/alltop/1/_state/state-91" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes.yaml" afterPath="$PROJECT_DIR$/notes.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/search-router.html" afterPath="$PROJECT_DIR$/src/components/search-router.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.html" afterPath="$PROJECT_DIR$/src/styles.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-flux.iws" />
@@ -29,84 +176,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search-router.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="774" selection-end="781" vertical-scroll-proportion="-15.0" vertical-offset="90" max-vertical-offset="774">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-details.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="9" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-search.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="200" selection-end="200" vertical-scroll-proportion="14.291667" vertical-offset="487" max-vertical-offset="1080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="627" selection-end="627" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="684">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="notes.yaml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="455" selection-end="455" vertical-scroll-proportion="0.3743501" vertical-offset="0" max-vertical-offset="577">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flux-store-article.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="792">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article-results.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="40" selection-start="1166" selection-end="1212" vertical-scroll-proportion="-6.3333335" vertical-offset="190" max-vertical-offset="1332">
-              <folding>
-                <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search-stats.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="29" selection-start="263" selection-end="263" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="450">
+            <state line="14" column="26" selection-start="533" selection-end="533" vertical-scroll-proportion="0.43674177" vertical-offset="0" max-vertical-offset="577">
               <folding />
             </state>
           </provider>
@@ -166,12 +239,12 @@
         <option value="$PROJECT_DIR$/src/components/article-search.html" />
         <option value="$PROJECT_DIR$/src/components/common-settings.html" />
         <option value="$PROJECT_DIR$/src/components/flux-store-article.html" />
-        <option value="$PROJECT_DIR$/src/components/flux-store-search-results.html" />
         <option value="$PROJECT_DIR$/src/dependencies.html" />
         <option value="$PROJECT_DIR$/src/components/search-server-settings.html" />
         <option value="$PROJECT_DIR$/src/components/search-router.html" />
         <option value="$PROJECT_DIR$/src/components/article-results.html" />
         <option value="$PROJECT_DIR$/src/styles.html" />
+        <option value="$PROJECT_DIR$/src/components/flux-store-search-results.html" />
         <option value="$PROJECT_DIR$/notes.yaml" />
       </list>
     </option>
@@ -226,38 +299,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-flux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -282,6 +323,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -292,23 +341,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -472,7 +513,11 @@
       <created>1438440891091</created>
       <updated>1438440891091</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="button style">
+      <created>1438448045918</created>
+      <updated>1438448045918</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -499,11 +544,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34705228" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -513,7 +556,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -531,7 +576,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="handle failed promise" />
     <MESSAGE value="&lt;wb-actions&gt; not Polymer anymore" />
     <MESSAGE value="don't user &lt;wb-actions&gt; too early" />
     <MESSAGE value="try to fix routing" />
@@ -556,12 +600,62 @@
     <MESSAGE value="remove handler" />
     <MESSAGE value="rewrite store as simple component" />
     <MESSAGE value="'polymer way' of declaring shared constants" />
-    <option name="LAST_COMMIT_MESSAGE" value="'polymer way' of declaring shared constants" />
+    <MESSAGE value="button style" />
+    <option name="LAST_COMMIT_MESSAGE" value="button style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="46" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="9" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search-stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/flux-store-search-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="35" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="720">
@@ -592,25 +686,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="7" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="540">
-          <folding />
-        </state>
+        <state line="22" column="7" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="13" selection-start="2379" selection-end="2379" vertical-scroll-proportion="0.0" vertical-offset="1728" max-vertical-offset="1962">
-          <folding>
-            <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-actions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="342">
-          <folding />
-        </state>
+        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
@@ -636,17 +724,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="45" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0" vertical-offset="789" max-vertical-offset="1638">
-          <folding>
-            <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,11 +806,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="937" selection-end="937" vertical-scroll-proportion="-16.625" vertical-offset="123" max-vertical-offset="666" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="13" selection-start="1237" selection-end="1237" vertical-scroll-proportion="1.3656846" vertical-offset="616" max-vertical-offset="1512">
@@ -736,91 +815,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/gulp-connect/node_modules/connect/node_modules/serve-index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="9" selection-start="6412" selection-end="6412" vertical-scroll-proportion="0.33333334" vertical-offset="4511" max-vertical-offset="9054">
-          <folding />
-        </state>
+        <state line="261" column="9" selection-start="6412" selection-end="6412" vertical-scroll-proportion="0.33333334" vertical-offset="4511" max-vertical-offset="9054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/reflux/dist/reflux.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24246">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="24246" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.5698324" vertical-offset="36" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="19" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.5698324" vertical-offset="36" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="762" selection-end="762" vertical-scroll-proportion="0.38324422" vertical-offset="163" max-vertical-offset="1746">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/flux-store-search-results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="843" selection-end="843" vertical-scroll-proportion="0.87150836" vertical-offset="18" max-vertical-offset="1782">
-          <folding />
-        </state>
+        <state line="21" column="29" selection-start="762" selection-end="762" vertical-scroll-proportion="0.38324422" vertical-offset="163" max-vertical-offset="1746" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dependencies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="63" selection-start="897" selection-end="897" vertical-scroll-proportion="0.43575418" vertical-offset="0" max-vertical-offset="537">
-          <folding />
-        </state>
+        <state line="13" column="63" selection-start="897" selection-end="897" vertical-scroll-proportion="0.43575418" vertical-offset="0" max-vertical-offset="537" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/flux-actions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.10055866" vertical-offset="0" max-vertical-offset="537">
-          <folding />
-        </state>
+        <state line="3" column="55" selection-start="170" selection-end="170" vertical-scroll-proportion="0.10055866" vertical-offset="0" max-vertical-offset="537" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/search-server-settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="205" selection-end="205" vertical-scroll-proportion="0.30167598" vertical-offset="0" max-vertical-offset="537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="792">
-          <folding />
-        </state>
+        <state line="9" column="17" selection-start="205" selection-end="205" vertical-scroll-proportion="0.30167598" vertical-offset="0" max-vertical-offset="537" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="627" selection-end="627" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="684">
+        <state line="14" column="17" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="200" selection-end="200" vertical-scroll-proportion="14.291667" vertical-offset="487" max-vertical-offset="1080">
+        <state line="8" column="34" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="246" selection-end="246" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="1800">
+        <state line="10" column="9" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>
@@ -834,30 +883,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/search-router.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="774" selection-end="781" vertical-scroll-proportion="-15.0" vertical-offset="90" max-vertical-offset="774">
+        <state line="25" column="19" selection-start="774" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/article-results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="40" selection-start="1166" selection-end="1212" vertical-scroll-proportion="-6.3333335" vertical-offset="190" max-vertical-offset="1332">
-          <folding>
-            <element signature="tag#style#0;tag#dom-module#0" expanded="false" />
-          </folding>
+        <state line="50" column="9" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1854">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.html">
+    <entry file="file://$PROJECT_DIR$/src/components/flux-store-article.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="29" selection-start="263" selection-end="263" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="450">
+        <state line="12" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/flux-store-search-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="35" selection-start="896" selection-end="896" vertical-scroll-proportion="0.9385475" vertical-offset="0" max-vertical-offset="1782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="205" selection-end="205" vertical-scroll-proportion="0.17318435" vertical-offset="87" max-vertical-offset="648">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="455" selection-end="455" vertical-scroll-proportion="0.3743501" vertical-offset="0" max-vertical-offset="577">
+        <state line="14" column="26" selection-start="533" selection-end="533" vertical-scroll-proportion="0.43674177" vertical-offset="0" max-vertical-offset="577">
           <folding />
         </state>
       </provider>
